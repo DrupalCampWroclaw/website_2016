@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="Application Test" tests="3" assertions="23" failures="0" errors="0" time="0.981069">
+    <testsuite name="ApplicationTest" file="/home/gbartman/openBIT/www2/drupalcampwroclaw/website_2015/app/sites/all/modules/custom/application/tests/ApplicationTest.php" tests="3" assertions="23" failures="0" errors="0" time="0.981069">
+      <testcase name="testFeaturesDefault" class="ApplicationTest" file="/home/gbartman/openBIT/www2/drupalcampwroclaw/website_2015/app/sites/all/modules/custom/application/tests/ApplicationTest.php" line="24" assertions="9" time="0.977340">
+        <system-out>
+Test features state 0 = FEATURES_DEFAULT, 1 = FEATURES_OVERRIDDEN, 2=FEATURES_NEEDS_REVIEW 
+Test features default: application status: 0  [language: en ]
+Test features default: news status: 0  [language: en ]
+Test features default: layout status: 0  [language: en ]
+Test features default: page status: 0  [language: en ]
+Test features default: room status: 0  [language: en ]
+Test features default: sponsor status: 0  [language: en ]
+Test features default: text_formats status: 0  [language: en ]
+Test features default: timeslot status: 0  [language: en ]
+Test features default: userprofile status: 0  [language: en ]
+</system-out>
+      </testcase>
+      <testcase name="testModulesEnabled" class="ApplicationTest" file="/home/gbartman/openBIT/www2/drupalcampwroclaw/website_2015/app/sites/all/modules/custom/application/tests/ApplicationTest.php" line="51" assertions="10" time="0.002023">
+        <system-out>
+Test module enabled: 1 [application]
+Test module enabled: 1 [news]
+Test module enabled: 1 [layout]
+Test module enabled: 1 [page]
+Test module enabled: 1 [room]
+Test module enabled: 1 [sponsor]
+Test module enabled: 1 [text_formats]
+Test module enabled: 1 [timeslot]
+Test module enabled: 1 [userprofile]
+Test module enabled: 1 [dblog]
+</system-out>
+      </testcase>
+      <testcase name="testModulesDisabled" class="ApplicationTest" file="/home/gbartman/openBIT/www2/drupalcampwroclaw/website_2015/app/sites/all/modules/custom/application/tests/ApplicationTest.php" line="64" assertions="4" time="0.001706">
+        <system-out>
+Test module disabled: 1 [devel] 
+Test module disabled: 1 [coder] 
+Test module disabled: 1 [overlay] 
+Test module disabled: 1 [toolbar] 
+</system-out>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testsuites>
