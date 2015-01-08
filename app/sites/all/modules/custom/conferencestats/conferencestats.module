@@ -56,7 +56,7 @@ function conferencestats_get_attendees_count() {
 function conferencestats_get_day_left() {
   $today = date('m/d/Y');
   $today = strtotime($today);
-  $finish = '2014-05-16';
+  $finish = '2015-05-29';
   $finish = strtotime($finish);
 
   $diff = $finish - $today;
