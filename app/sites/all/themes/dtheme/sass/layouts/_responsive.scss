@@ -37,7 +37,7 @@ $zen-auto-include-item-base: false;
 .region-bottom {
   margin-left: auto;
   margin-right: auto;
-  max-width: 1200px;
+  max-width: $width-page;
 }
 
 /* Apply the shared properties of grid items in a single, efficient ruleset. */
@@ -157,7 +157,7 @@ $zen-auto-include-item-base: false;
 /**
  * Use 5 grid columns for larger screens.
  */
-@media all and (min-width: 960px) {
+@media all and (min-width: $screen-desktop-min) {
 
   $zen-column-count: 5;
 
@@ -182,12 +182,14 @@ $zen-auto-include-item-base: false;
   .sidebar-second {
     /* Span 4 columns, starting in 1st column from left. */
     #content {
-      @include zen-grid-item(4, 1);
+      //@include zen-grid-item(4, 1);
+      @include zen-grid-item(4, 1, left, $zen-column-count);
     }
 
     /* Span 1 column, starting in 5th column from left. */
     .region-sidebar-second {
-      @include zen-grid-item(1, 5);
+      //@include zen-grid-item(1, 5);
+      @include zen-grid-item(1, 5, left, $zen-column-count);
     }
   }
 
