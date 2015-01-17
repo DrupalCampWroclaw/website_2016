@@ -6,6 +6,7 @@ project = application
 dependencies[] = admin_menu
 dependencies[] = admin_menu_toolbar
 dependencies[] = application_api
+dependencies[] = application_settings
 dependencies[] = auto_nodetitle
 dependencies[] = block
 dependencies[] = captcha
