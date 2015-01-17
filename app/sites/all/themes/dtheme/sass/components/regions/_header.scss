@@ -120,14 +120,10 @@
 
 #conference-statistics {
 
+  font-size: $font-size-header-bar;
+
   span {
     font-weight: bold;
-    /*background: white;
-    color: $red1;
-    padding: 0.2em;
-    border-radius: 50%;
-    width: 25px;
-    height: 25px;*/
   }
   div {
     float: left;
@@ -149,6 +145,7 @@
 }
 
 #social-links {
+  float: left;
   ul {
     margin:0;
     padding:0;
