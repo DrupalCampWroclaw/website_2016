@@ -2468,34 +2468,35 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 
 /* line 123, ../sass/components/regions/_header.scss */
 #conference-statistics span {
-  background: white;
-  color: #eb4e3a;
+  font-weight: bold;
+  /*background: white;
+  color: $red1;
   padding: 0.2em;
   border-radius: 50%;
   width: 25px;
-  height: 25px;
+  height: 25px;*/
 }
-/* line 131, ../sass/components/regions/_header.scss */
+/* line 132, ../sass/components/regions/_header.scss */
 #conference-statistics div {
   float: left;
 }
 @media all and (min-width: 960px) {
-  /* line 144, ../sass/components/regions/_header.scss */
+  /* line 145, ../sass/components/regions/_header.scss */
   #conference-statistics div {
     padding: 0.5em 1em;
   }
 }
 
-/* line 151, ../sass/components/regions/_header.scss */
+/* line 152, ../sass/components/regions/_header.scss */
 #social-links ul {
   margin: 0;
   padding: 0;
 }
-/* line 154, ../sass/components/regions/_header.scss */
+/* line 155, ../sass/components/regions/_header.scss */
 #social-links ul li {
   display: inline;
 }
-/* line 158, ../sass/components/regions/_header.scss */
+/* line 159, ../sass/components/regions/_header.scss */
 #social-links .facebook,
 #social-links .twitter,
 #social-links .gplus,
@@ -2509,106 +2510,106 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   float: left;
   padding-right: 0.5em;
 }
-/* line 172, ../sass/components/regions/_header.scss */
+/* line 173, ../sass/components/regions/_header.scss */
 #social-links .facebook {
   background: url(../images/fb1.png) no-repeat;
 }
-/* line 176, ../sass/components/regions/_header.scss */
+/* line 177, ../sass/components/regions/_header.scss */
 #social-links .twitter {
   background: url(../images/twitter1.png) no-repeat;
 }
-/* line 179, ../sass/components/regions/_header.scss */
+/* line 180, ../sass/components/regions/_header.scss */
 #social-links .gplus {
   background: url(../images/linkedin1.png) no-repeat;
 }
-/* line 182, ../sass/components/regions/_header.scss */
+/* line 183, ../sass/components/regions/_header.scss */
 #social-links .linkedin {
   background: url(../images/linkedin1.png) no-repeat;
 }
-/* line 185, ../sass/components/regions/_header.scss */
+/* line 186, ../sass/components/regions/_header.scss */
 #social-links .rss {
   background: url(../images/rss1.png) no-repeat;
 }
 @media all and (min-width: 960px) {
-  /* line 198, ../sass/components/regions/_header.scss */
+  /* line 199, ../sass/components/regions/_header.scss */
   #social-links ul {
     padding: 0.5em 0;
   }
 }
 
-/* line 205, ../sass/components/regions/_header.scss */
+/* line 206, ../sass/components/regions/_header.scss */
 #header-bar-center #user-links {
   text-align: right;
 }
-/* line 208, ../sass/components/regions/_header.scss */
+/* line 209, ../sass/components/regions/_header.scss */
 #header-bar-center #conference-statistics {
   text-align: left;
 }
-/* line 210, ../sass/components/regions/_header.scss */
+/* line 211, ../sass/components/regions/_header.scss */
 #header-bar-center #conference-statistics ul {
   margin: 0;
   padding: 0.5em;
 }
-/* line 213, ../sass/components/regions/_header.scss */
+/* line 214, ../sass/components/regions/_header.scss */
 #header-bar-center #conference-statistics ul li {
   display: inline;
   padding: 0.5em;
 }
 @media all and (max-width: 480px) {
-  /* line 204, ../sass/components/regions/_header.scss */
+  /* line 205, ../sass/components/regions/_header.scss */
   #header-bar-center {
     font-size: 0.70em;
   }
-  /* line 224, ../sass/components/regions/_header.scss */
+  /* line 225, ../sass/components/regions/_header.scss */
   #header-bar-center #conference-statistics {
     float: left;
     width: 200%;
     margin-left: 0%;
     margin-right: -200%;
   }
-  /* line 227, ../sass/components/regions/_header.scss */
+  /* line 228, ../sass/components/regions/_header.scss */
   #header-bar-center #user-links {
     float: left;
     width: 200%;
     margin-left: 200%;
     margin-right: -400%;
   }
-  /* line 234, ../sass/components/regions/_header.scss */
+  /* line 235, ../sass/components/regions/_header.scss */
   #header-bar-center #conference-statistics ul {
     margin: 0;
     padding: 0.5em 0;
   }
-  /* line 237, ../sass/components/regions/_header.scss */
+  /* line 238, ../sass/components/regions/_header.scss */
   #header-bar-center #conference-statistics ul li {
     display: block;
     padding: 0 0.2em 0 0;
   }
-  /* line 244, ../sass/components/regions/_header.scss */
+  /* line 245, ../sass/components/regions/_header.scss */
   #header-bar-center #user-links {
     font-size: 1.1em;
   }
-  /* line 246, ../sass/components/regions/_header.scss */
+  /* line 247, ../sass/components/regions/_header.scss */
   #header-bar-center #user-links ul {
     padding: 0.5em 0;
   }
-  /* line 248, ../sass/components/regions/_header.scss */
+  /* line 249, ../sass/components/regions/_header.scss */
   #header-bar-center #user-links ul li {
     display: block;
   }
 }
 @media all and (min-width: 481px) and (max-width: 959px) {
-  /* line 204, ../sass/components/regions/_header.scss */
+  /* line 205, ../sass/components/regions/_header.scss */
   #header-bar-center {
     font-size: 0.9em;
   }
-  /* line 259, ../sass/components/regions/_header.scss */
+  /* line 260, ../sass/components/regions/_header.scss */
   #header-bar-center #conference-statistics {
     float: left;
     width: 300%;
     margin-left: 0%;
     margin-right: -300%;
   }
-  /* line 262, ../sass/components/regions/_header.scss */
+  /* line 263, ../sass/components/regions/_header.scss */
   #header-bar-center #user-links {
     float: left;
     width: 100%;
@@ -2617,20 +2618,20 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   }
 }
 @media all and (min-width: 960px) {
-  /* line 204, ../sass/components/regions/_header.scss */
+  /* line 205, ../sass/components/regions/_header.scss */
   #header-bar-center {
     /*  #social-links {
        @include zen-grid-item(1, 4);
      } */
   }
-  /* line 270, ../sass/components/regions/_header.scss */
+  /* line 271, ../sass/components/regions/_header.scss */
   #header-bar-center #conference-statistics {
     float: left;
     width: 200%;
     margin-left: 0%;
     margin-right: -200%;
   }
-  /* line 273, ../sass/components/regions/_header.scss */
+  /* line 274, ../sass/components/regions/_header.scss */
   #header-bar-center #user-links {
     float: left;
     width: 200%;

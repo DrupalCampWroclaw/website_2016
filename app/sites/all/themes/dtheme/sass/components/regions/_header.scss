@@ -12,7 +12,7 @@
 
     overflow: hidden;
     text-align: center;
-     
+
 
     position: relative;
 
@@ -121,12 +121,13 @@
 #conference-statistics {
 
   span {
-    background: white;
+    font-weight: bold;
+    /*background: white;
     color: $red1;
     padding: 0.2em;
     border-radius: 50%;
     width: 25px;
-    height: 25px;
+    height: 25px;*/
   }
   div {
     float: left;
