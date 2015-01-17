@@ -106,7 +106,18 @@ function layout_theme($existing, $type, $theme, $path) {
 function layout_block_main_menu() {
   $output = '';
 
-  $output = 'TODO';
+  $output .= 'TODO';
+
+  return $output;
+}
+
+/**
+ * Language links in page header.
+ */
+function layout_language_links() {
+  $output = '';
+
+  $output .= 'EN/PL';
 
   return $output;
 }

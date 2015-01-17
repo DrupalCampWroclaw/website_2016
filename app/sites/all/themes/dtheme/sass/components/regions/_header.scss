@@ -144,67 +144,99 @@
   }
 }
 
-#social-links {
-  float: left;
-  ul {
-    margin:0;
-    padding:0;
-    li {
-      display: block;
-      float: left;
-      margin-right: 0.5em;
-    }
-  }
-  .facebook,
-  .twitter,
-  .gplus,
-  .linkedin,
-  .rss {
-    text-indent: -2000px;
-    font-size: 0;
-    display: block;
-    width: 25px;
-    height: 25px;
-    float: left;
 
-  }
 
-  .facebook {
-    background: url(../images/social_fb.png) no-repeat;
-
-  }
-  .twitter {
-    background: url(../images/social_twitter.png) no-repeat;
-  }
-  .gplus {
-    background: url(../images/social_linkedin.png) no-repeat;
-  }
-  .linkedin {
-    background: url(../images/social_linkedin.png) no-repeat;
-  }
-  .rss {
-    background: url(../images/social_rss.png) no-repeat;
-  }
-
-  @media all and (max-width: 480px) {
-
-  }
-
-  @media all and (min-width: 481px) and (max-width: 959px) {
-
-  }
-
+// Layout header
+#header-bar-center {
   @media all and (min-width: 960px) {
-    ul {
-      padding: 0.5em 0;
+
+    #header-bar-center-text-left{
+      float: left;
+    }
+    #header-bar-center-text-right{
+      float: right;
+    }
+
+    .header-bar-center-item{
+      float: left;
+    }
+
+    #social-links {
+
+    }
+    #conference-statistics {
+
+    }
+    #user-links {
+
+    }
+    #language-links {
+
     }
   }
+
 }
+// Layout header end
 
 #header-bar-center {
-  #user-links{
-    text-align: right;
+
+  #social-links {
+    float: left;
+    ul {
+      margin:0;
+      padding:0;
+      li {
+        display: block;
+        float: left;
+        margin-right: 0.5em;
+      }
+    }
+    .facebook,
+    .twitter,
+    .gplus,
+    .linkedin,
+    .rss {
+      text-indent: -2000px;
+      font-size: 0;
+      display: block;
+      width: 25px;
+      height: 25px;
+      float: left;
+
+    }
+
+    .facebook {
+      background: url(../images/social_fb.png) no-repeat;
+
+    }
+    .twitter {
+      background: url(../images/social_twitter.png) no-repeat;
+    }
+    .gplus {
+      background: url(../images/social_linkedin.png) no-repeat;
+    }
+    .linkedin {
+      background: url(../images/social_linkedin.png) no-repeat;
+    }
+    .rss {
+      background: url(../images/social_rss.png) no-repeat;
+    }
+
+    @media all and (max-width: 480px) {
+
+    }
+
+    @media all and (min-width: 481px) and (max-width: 959px) {
+
+    }
+
+    @media all and (min-width: 960px) {
+      ul {
+        padding: 0.5em 0;
+      }
+    }
   }
+
   #conference-statistics {
     padding-top: 0.2em;
     text-align: left;
@@ -213,9 +245,20 @@
       padding: 0.5em;
       li {
         display: inline;
-        padding:  0.5em;
+        padding:  0.5em 1em;
       }
     }
+  }
+
+  #user-links{
+    text-align: right;
+    a {
+      color: $color7;
+    }
+  }
+
+  #language-links {
+    padding: 0.5em;
   }
 
   @media all and (max-width: 480px) {
@@ -223,15 +266,14 @@
 
     $zen-column-count: 4;
     #conference-statistics {
-      @include zen-grid-item(2, 1);
+      @include zen-grid-item(2, 1, left, $zen-column-count);
+
     }
     #user-links {
-      @include zen-grid-item(2, 3);
+      @include zen-grid-item(2, 3, left, $zen-column-count);
     }
 
     #conference-statistics {
-
-
       ul {
         margin: 0;
         padding: 0.5em 0;
@@ -266,15 +308,15 @@
   }
 
   @media all and (min-width: 960px) {
-
+/*
     $zen-column-count: 4;
     #conference-statistics {
-      @include zen-grid-item(2, 1);
+      @include zen-grid-item(2, 1, left, $zen-column-count);
     }
     #user-links {
-      @include zen-grid-item(2, 3);
+      @include zen-grid-item(2, 3, left, $zen-column-count);
     }
-    /*  #social-links {
+    *//*  #social-links {
        @include zen-grid-item(1, 4);
      } */
   }

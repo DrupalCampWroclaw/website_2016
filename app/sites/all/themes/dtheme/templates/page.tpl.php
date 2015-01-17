@@ -17,9 +17,16 @@
         <div id="header-bar-center">
 
           <div id="header-bar-center-text" class="clearfix">
-            <div id="social-links" ><?php print $sociallinks; ?></div>
-            <div id="conference-statistics"><?php print $confstats; ?></div>
-            <div id="user-links"><?php print $userlinks; ?></div>
+            <div id="header-bar-center-text-left">
+              <div id="social-links" class="header-bar-center-item"><?php print $sociallinks; ?></div>
+              <div id="conference-statistics" class="header-bar-center-item"><?php print $confstats; ?></div>
+            </div>
+
+            <div id="header-bar-center-text-right">
+              <div id="user-links" class="header-bar-center-item"><?php print $userlinks; ?></div>
+              <div id="language-links" class="header-bar-center-item"><?php print $language_links; ?></div>
+            </div>
+
 
           </div>
 
