@@ -205,6 +205,13 @@ function application_update_7030() {
  * Update 2015-01-17
  */
 function application_update_7031() {
+
+    $module_list = array(
+    'partners_page',
+  );
+  module_enable($module_list);
+  module_list(TRUE, FALSE);
+
   drupal_flush_all_caches();
   application_api_features_revert(application_features_list());
 }
