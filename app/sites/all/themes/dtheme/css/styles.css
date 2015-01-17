@@ -2602,45 +2602,46 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 /* line 283, ../sass/components/regions/_header.scss */
 #header-bar-center #language-links ul li.active-language a {
   color: #ffffff;
+  text-decoration: underline;
 }
 @media all and (max-width: 480px) {
   /* line 181, ../sass/components/regions/_header.scss */
   #header-bar-center {
     font-size: 0.70em;
   }
-  /* line 294, ../sass/components/regions/_header.scss */
+  /* line 295, ../sass/components/regions/_header.scss */
   #header-bar-center #conference-statistics {
     float: left;
     width: 50%;
     margin-left: 0%;
     margin-right: -50%;
   }
-  /* line 298, ../sass/components/regions/_header.scss */
+  /* line 299, ../sass/components/regions/_header.scss */
   #header-bar-center #user-links {
     float: left;
     width: 50%;
     margin-left: 50%;
     margin-right: -100%;
   }
-  /* line 303, ../sass/components/regions/_header.scss */
+  /* line 304, ../sass/components/regions/_header.scss */
   #header-bar-center #conference-statistics ul {
     margin: 0;
     padding: 0.5em 0;
   }
-  /* line 306, ../sass/components/regions/_header.scss */
+  /* line 307, ../sass/components/regions/_header.scss */
   #header-bar-center #conference-statistics ul li {
     display: block;
     padding: 0 0.2em 0 0;
   }
-  /* line 313, ../sass/components/regions/_header.scss */
+  /* line 314, ../sass/components/regions/_header.scss */
   #header-bar-center #user-links {
     font-size: 1.1em;
   }
-  /* line 315, ../sass/components/regions/_header.scss */
+  /* line 316, ../sass/components/regions/_header.scss */
   #header-bar-center #user-links ul {
     padding: 0.5em 0;
   }
-  /* line 317, ../sass/components/regions/_header.scss */
+  /* line 318, ../sass/components/regions/_header.scss */
   #header-bar-center #user-links ul li {
     display: block;
   }
@@ -2650,14 +2651,14 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   #header-bar-center {
     font-size: 0.9em;
   }
-  /* line 328, ../sass/components/regions/_header.scss */
+  /* line 329, ../sass/components/regions/_header.scss */
   #header-bar-center #conference-statistics {
     float: left;
     width: 300%;
     margin-left: 0%;
     margin-right: -300%;
   }
-  /* line 331, ../sass/components/regions/_header.scss */
+  /* line 332, ../sass/components/regions/_header.scss */
   #header-bar-center #user-links {
     float: left;
     width: 100%;
