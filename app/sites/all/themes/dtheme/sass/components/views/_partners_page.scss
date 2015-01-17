@@ -1,0 +1,22 @@
+.view-partners-page {
+  float:left;
+    clear: both;
+    width: 100%;
+  .view-content {
+float:left;
+    clear: both;
+    width: 100%;
+    h3{
+      text-align: center;
+    }
+    .views-row {
+      float: left;
+      width: auto;
+      .field-content {
+        padding: 0 0.2em 0.2em 0.2em;
+        text-align: center;
+      }
+    }
+  }
+
+}
