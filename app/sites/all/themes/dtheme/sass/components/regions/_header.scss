@@ -24,6 +24,17 @@
       padding: 0 67px;
     }
 
+    #header-logo {
+      display: block;
+      margin:0;
+      padding:0;
+      width: 100%;
+      height: 272px;
+      background: url(../images/header_logo.png) no-repeat top center;
+      text-indent: -20000px;
+      font-size: 0;
+    }
+
     /*@media all and (max-width: 480px) {
       background: url("../images/header-bar-center2.png") repeat-x;
       #header-bar-center {
@@ -87,7 +98,7 @@
   }
 
   @media (min-width: 960px) {
-    background: transparent url(../images/header-bg2.png) no-repeat center center;
+    background: $color8 url(../images/header_bg_a1.png) no-repeat center center;
   }
 }
 
