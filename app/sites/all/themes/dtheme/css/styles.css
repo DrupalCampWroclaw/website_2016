@@ -669,16 +669,16 @@ table {
   /* line 91, ../sass/layouts/_responsive.scss */
   .sidebar-first #content {
     float: left;
-    width: 200%;
-    margin-left: 100%;
-    margin-right: -300%;
+    width: 66.66667%;
+    margin-left: 33.33333%;
+    margin-right: -100%;
   }
   /* line 96, ../sass/layouts/_responsive.scss */
   .sidebar-first .region-sidebar-first {
     float: left;
-    width: 100%;
+    width: 33.33333%;
     margin-left: 0%;
-    margin-right: -100%;
+    margin-right: -33.33333%;
   }
 
   /**
@@ -692,16 +692,16 @@ table {
   /* line 106, ../sass/layouts/_responsive.scss */
   .sidebar-second #content {
     float: left;
-    width: 200%;
+    width: 66.66667%;
     margin-left: 0%;
-    margin-right: -200%;
+    margin-right: -66.66667%;
   }
   /* line 111, ../sass/layouts/_responsive.scss */
   .sidebar-second .region-sidebar-second {
     float: left;
-    width: 100%;
-    margin-left: 200%;
-    margin-right: -300%;
+    width: 33.33333%;
+    margin-left: 66.66667%;
+    margin-right: -100%;
   }
 
   /**
@@ -716,23 +716,23 @@ table {
   /* line 121, ../sass/layouts/_responsive.scss */
   .two-sidebars #content {
     float: left;
-    width: 200%;
-    margin-left: 100%;
-    margin-right: -300%;
+    width: 66.66667%;
+    margin-left: 33.33333%;
+    margin-right: -100%;
   }
   /* line 126, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-first {
     float: left;
-    width: 100%;
+    width: 33.33333%;
     margin-left: 0%;
-    margin-right: -100%;
+    margin-right: -33.33333%;
   }
   /* line 131, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-second {
     float: left;
-    width: 300%;
+    width: 100%;
     margin-left: 0%;
-    margin-right: -300%;
+    margin-right: -100%;
     padding-left: 0;
     padding-right: 0;
     clear: left;
@@ -754,24 +754,24 @@ table {
   /* line 141, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-second .block:nth-child(3n+1) {
     float: left;
-    width: 100%;
+    width: 33.33333%;
     margin-left: 0%;
-    margin-right: -100%;
+    margin-right: -33.33333%;
     clear: left;
   }
   /* line 146, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-second .block:nth-child(3n+2) {
     float: left;
-    width: 100%;
-    margin-left: 100%;
-    margin-right: -200%;
+    width: 33.33333%;
+    margin-left: 33.33333%;
+    margin-right: -66.66667%;
   }
   /* line 150, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-second .block:nth-child(3n) {
     float: left;
-    width: 100%;
-    margin-left: 200%;
-    margin-right: -300%;
+    width: 33.33333%;
+    margin-left: 66.66667%;
+    margin-right: -100%;
   }
 }
 /**
@@ -789,16 +789,16 @@ table {
   /* line 169, ../sass/layouts/_responsive.scss */
   .sidebar-first #content {
     float: left;
-    width: 400%;
-    margin-left: 100%;
-    margin-right: -500%;
+    width: 80%;
+    margin-left: 20%;
+    margin-right: -100%;
   }
   /* line 174, ../sass/layouts/_responsive.scss */
   .sidebar-first .region-sidebar-first {
     float: left;
-    width: 100%;
+    width: 20%;
     margin-left: 0%;
-    margin-right: -100%;
+    margin-right: -20%;
   }
 
   /**
@@ -836,23 +836,23 @@ table {
   /* line 201, ../sass/layouts/_responsive.scss */
   .two-sidebars #content {
     float: left;
-    width: 300%;
-    margin-left: 100%;
-    margin-right: -400%;
+    width: 60%;
+    margin-left: 20%;
+    margin-right: -80%;
   }
   /* line 206, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-first {
     float: left;
-    width: 100%;
+    width: 20%;
     margin-left: 0%;
-    margin-right: -100%;
+    margin-right: -20%;
   }
   /* line 211, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-second {
     float: left;
-    width: 100%;
-    margin-left: 400%;
-    margin-right: -500%;
+    width: 20%;
+    margin-left: 80%;
+    margin-right: -100%;
   }
 }
 /**
@@ -2663,16 +2663,16 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   /* line 341, ../sass/components/regions/_header.scss */
   #header-bar-center #conference-statistics {
     float: left;
-    width: 300%;
+    width: 75%;
     margin-left: 0%;
-    margin-right: -300%;
+    margin-right: -75%;
   }
   /* line 344, ../sass/components/regions/_header.scss */
   #header-bar-center #user-links {
     float: left;
-    width: 100%;
-    margin-left: 300%;
-    margin-right: -400%;
+    width: 25%;
+    margin-left: 75%;
+    margin-right: -100%;
   }
 }
 @media all and (min-width: 960px) {

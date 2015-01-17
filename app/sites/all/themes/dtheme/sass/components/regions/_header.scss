@@ -303,7 +303,7 @@
   @media all and (max-width: 480px) {
     font-size: 0.70em;
 
-    $zen-column-count: 4;
+    $zen-column-count: 4 !global;
     #conference-statistics {
       @include zen-grid-item(2, 1, left, $zen-column-count);
 
@@ -337,7 +337,7 @@
 
   @media all and (min-width: 481px) and (max-width: 959px) {
     font-size: 0.9em;
-    $zen-column-count: 4;
+    $zen-column-count: 4 !global;
     #conference-statistics {
       @include zen-grid-item(3, 1);
     }
