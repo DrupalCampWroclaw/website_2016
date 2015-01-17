@@ -1,7 +1,7 @@
 name = Layout
 core = 7.x
 package = APP
-version = 7.x-1.0-beta10
+version = 7.x-1.0-beta11
 project = layout
 dependencies[] = block
 dependencies[] = context
@@ -88,4 +88,5 @@ features[variable][] = superfish_wrapmul_1
 features[variable][] = superfish_wrapul_1
 features[variable][] = superfish_zebra_1
 features_exclude[dependencies][image] = image
+mtime = 1416815997
 project status url = http://updates-drupal.drupalcampwroclaw.pl/release-history

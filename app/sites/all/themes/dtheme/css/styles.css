@@ -2537,6 +2537,11 @@ table tr:hover td {
   background-color: #fcf1ed;
 }
 
+/* line 1, ../sass/components/blocks/_block-layout-main-menu.scss */
+#block-layout-main-menu {
+  background: red;
+}
+
 /* line 1, ../sass/components/menu/_mainmenu.scss */
 #mainmenu {
   padding: 0;

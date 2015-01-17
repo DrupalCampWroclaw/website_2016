@@ -144,11 +144,11 @@ function layout_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'superfish-1' => array(
-          'module' => 'superfish',
-          'delta' => '1',
+        'layout-main_menu' => array(
+          'module' => 'layout',
+          'delta' => 'main_menu',
           'region' => 'navigation',
-          'weight' => '-10',
+          'weight' => '-9',
         ),
         'views-sponsors_diamond_block-block' => array(
           'module' => 'views',
@@ -156,17 +156,17 @@ function layout_context_default_contexts() {
           'region' => 'sidebar_second',
           'weight' => '-10',
         ),
-        'block-2' => array(
-          'module' => 'block',
-          'delta' => '2',
-          'region' => 'sidebar_second',
-          'weight' => '15',
-        ),
         'layout-sessions' => array(
           'module' => 'layout',
           'delta' => 'sessions',
           'region' => 'sidebar_second',
           'weight' => '-8',
+        ),
+        'block-2' => array(
+          'module' => 'block',
+          'delta' => '2',
+          'region' => 'sidebar_second',
+          'weight' => '15',
         ),
       ),
     ),

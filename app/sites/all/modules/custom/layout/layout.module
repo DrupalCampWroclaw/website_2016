@@ -39,6 +39,10 @@ function layout_block_info() {
     'info' => t('Frontpage Top'), // For youtube streaming.
   );
 
+  $blocks['main_menu'] = array(
+    'info' => t('main_menu'),
+  );
+
   return $blocks;
 }
 
@@ -62,9 +66,13 @@ function layout_block_view($delta = '') {
       $block['subject'] = t('Sessions');
       $block['content'] = theme('sessions');
       break;
-     case 'frontpage_top':
+    case 'frontpage_top':
       $block['subject'] = '';
       $block['content'] = variable_get_lang('appset_frontpage_top', '');
+      break;
+    case 'main_menu':
+      $block['subject'] = '';
+      $block['content'] = layout_block_main_menu();
       break;
   }
   return $block;
@@ -88,4 +96,17 @@ function layout_theme($existing, $type, $theme, $path) {
       'template' => 'sessions',
     ),
   );
+}
+
+/**
+ * Main menu block.
+ *
+ * @return string
+ */
+function layout_block_main_menu() {
+  $output = '';
+
+  $output = 'TODO';
+
+  return $output;
 }
