@@ -150,7 +150,9 @@
     margin:0;
     padding:0;
     li {
-      display: inline;
+      display: block;
+      float: left;
+      margin-right: 0.5em;
     }
   }
   .facebook,
@@ -164,24 +166,24 @@
     width: 25px;
     height: 25px;
     float: left;
-    padding-right: 0.5em;
+
   }
 
   .facebook {
-    background: url(../images/fb1.png) no-repeat;
+    background: url(../images/social_fb.png) no-repeat;
 
   }
   .twitter {
-    background: url(../images/twitter1.png) no-repeat;
+    background: url(../images/social_twitter.png) no-repeat;
   }
   .gplus {
-    background: url(../images/linkedin1.png) no-repeat;
+    background: url(../images/social_linkedin.png) no-repeat;
   }
   .linkedin {
-    background: url(../images/linkedin1.png) no-repeat;
+    background: url(../images/social_linkedin.png) no-repeat;
   }
   .rss {
-    background: url(../images/rss1.png) no-repeat;
+    background: url(../images/social_rss.png) no-repeat;
   }
 
   @media all and (max-width: 480px) {
@@ -204,6 +206,7 @@
     text-align: right;
   }
   #conference-statistics {
+    padding-top: 0.2em;
     text-align: left;
     ul {
       margin: 0;
