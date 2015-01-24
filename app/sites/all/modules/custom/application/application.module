@@ -35,6 +35,7 @@ function application_features_list() {
     'userprofile',
     'job',
     'session',
+    'partners_page',
     
   );
   return $features;

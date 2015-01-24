@@ -16,7 +16,7 @@ features[ctools][] = views:views_default:3.0
 features[features_api][] = api:2
 features[field_base][] = field_timeslot_date
 features[field_base][] = field_timeslot_room
-features[field_base][] = title_field
+
 features[field_instance][] = node-timeslot-field_timeslot_date
 features[field_instance][] = node-timeslot-field_timeslot_room
 features[field_instance][] = node-timeslot-title_field
