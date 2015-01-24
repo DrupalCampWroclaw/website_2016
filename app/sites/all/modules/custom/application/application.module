@@ -36,7 +36,6 @@ function application_features_list() {
     'job',
     'session',
     'partners_page',
-    
   );
   return $features;
 }
