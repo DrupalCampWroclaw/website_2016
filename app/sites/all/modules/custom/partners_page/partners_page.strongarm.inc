@@ -82,8 +82,22 @@ function partners_page_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'i18n_node_extended_partners';
+  $strongarm->value = 1;
+  $export['i18n_node_extended_partners'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'i18n_node_options_partners';
+  $strongarm->value = array();
+  $export['i18n_node_options_partners'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'language_content_type_partners';
-  $strongarm->value = '0';
+  $strongarm->value = '4';
   $export['language_content_type_partners'] = $strongarm;
 
   $strongarm = new stdClass();
