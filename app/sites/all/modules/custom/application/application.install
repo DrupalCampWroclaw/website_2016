@@ -223,6 +223,13 @@ function application_update_7031() {
  * Update 2015-01-24
  */
 function application_update_7032() {
+  module_enable(array('entity_translate', 'title'));
   drupal_flush_all_caches();
-application_api_features_revert(application_features_list()); // Try to revert Page feature. Don't work in first revert.
+  application_api_features_revert(application_features_list()); // Try to revert Page feature. Don't work in first revert.
+
+  $node_types = array('forum', 'job', 'news', 'page', 'partners', 'room', 'session', 'sponsor', 'timeslot');
+  foreach($node_types as $node_type){
+    title_field_replacement_batch_set('node', $node_type, 'title');
+  }
+
 }
