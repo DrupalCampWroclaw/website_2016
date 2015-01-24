@@ -10,6 +10,37 @@
 function userprofile_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance: 'user-user-field_attendance'
+  $field_instances['user-user-field_attendance'] = array(
+    'bundle' => 'user',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 5,
+      ),
+    ),
+    'entity_type' => 'user',
+    'field_name' => 'field_attendance',
+    'label' => 'Planned attendance',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => 0,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 51,
+    ),
+  );
+
   // Exported field_instance: 'user-user-field_user_about_me'
   $field_instances['user-user-field_user_about_me'] = array(
     'bundle' => 'user',
@@ -187,6 +218,7 @@ function userprofile_field_default_field_instances() {
   t('Job title');
   t('Last name');
   t('Organization');
+  t('Planned attendance');
 
   return $field_instances;
 }
