@@ -32,6 +32,12 @@ function layout_context_default_contexts() {
           'region' => 'content_top',
           'weight' => '-10',
         ),
+        'views-people-block_1' => array(
+          'module' => 'views',
+          'delta' => 'people-block_1',
+          'region' => 'sidebar_second',
+          'weight' => '-10',
+        ),
         'views-sponsors_frontpage_block-block' => array(
           'module' => 'views',
           'delta' => 'sponsors_frontpage_block-block',

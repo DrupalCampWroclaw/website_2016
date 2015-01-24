@@ -88,5 +88,5 @@ features[variable][] = superfish_wrapmul_1
 features[variable][] = superfish_wrapul_1
 features[variable][] = superfish_zebra_1
 features_exclude[dependencies][image] = image
-mtime = 1416815997
+mtime = 1421530492
 project status url = http://updates-drupal.drupalcampwroclaw.pl/release-history

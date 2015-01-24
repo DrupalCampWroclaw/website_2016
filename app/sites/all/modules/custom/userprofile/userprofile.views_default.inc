@@ -195,6 +195,39 @@ function userprofile_views_default_views() {
     4 => '4',
   );
   $handler->display->display_options['path'] = 'team';
+
+  /* Display: Featured speakers */
+  $handler = $view->new_display('block', 'Featured speakers', 'block_1');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Featured speakers';
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '3';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: User: Active */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'users';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = '1';
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: User: Name */
+  $handler->display->display_options['filters']['uid']['id'] = 'uid';
+  $handler->display->display_options['filters']['uid']['table'] = 'users';
+  $handler->display->display_options['filters']['uid']['field'] = 'uid';
+  $handler->display->display_options['filters']['uid']['operator'] = 'not in';
+  $handler->display->display_options['filters']['uid']['value'] = array(
+    0 => '1',
+  );
+  /* Filter criterion: User: User category (field_user_category) */
+  $handler->display->display_options['filters']['field_user_category_value']['id'] = 'field_user_category_value';
+  $handler->display->display_options['filters']['field_user_category_value']['table'] = 'field_data_field_user_category';
+  $handler->display->display_options['filters']['field_user_category_value']['field'] = 'field_user_category_value';
+  $handler->display->display_options['filters']['field_user_category_value']['value'] = array(
+    'featured' => 'featured',
+  );
   $translatables['people'] = array(
     t('Master'),
     t('Attendees'),
@@ -209,6 +242,7 @@ function userprofile_views_default_views() {
 <p>[field_user_organization]</p>'),
     t('Speakers'),
     t('Team'),
+    t('Featured speakers'),
   );
   $export['people'] = $view;
 
