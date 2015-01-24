@@ -434,7 +434,7 @@ function application_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'site_mail';
-  $strongarm->value = 'info@drupalcampwroclaw.pl';
+  $strongarm->value = 'admin@droptica.com';
   $export['site_mail'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -598,7 +598,7 @@ function application_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'user_register';
-  $strongarm->value = '0';
+  $strongarm->value = 2;
   $export['user_register'] = $strongarm;
 
   $strongarm = new stdClass();

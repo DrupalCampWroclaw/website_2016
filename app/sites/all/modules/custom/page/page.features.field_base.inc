@@ -37,8 +37,10 @@ function page_field_default_field_bases() {
     ),
     'locked' => 0,
     'module' => 'text',
-    'settings' => array(),
-    'translatable' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+    ),
+    'translatable' => 1,
     'type' => 'text_with_summary',
   );
 
@@ -56,7 +58,9 @@ function page_field_default_field_bases() {
     'indexes' => array(),
     'locked' => 0,
     'module' => 'viewfield',
-    'settings' => array(),
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+    ),
     'translatable' => 0,
     'type' => 'viewfield',
   );

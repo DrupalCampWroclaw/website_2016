@@ -10,6 +10,37 @@
 function userprofile_field_default_field_bases() {
   $field_bases = array();
 
+  // Exported field_base: 'field_attendance'
+  $field_bases['field_attendance'] = array(
+    'active' => 1,
+    'cardinality' => -1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_attendance',
+    'field_permissions' => array(
+      'type' => 2,
+    ),
+    'foreign keys' => array(),
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        'friday' => 'Friday',
+        'saturday' => 'Saturday',
+        'sunday' => 'Sunday',
+        'no' => 'Unfortunately I will not make it this time',
+      ),
+      'allowed_values_function' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'list_text',
+  );
+
   // Exported field_base: 'field_user_about_me'
   $field_bases['field_user_about_me'] = array(
     'active' => 1,
