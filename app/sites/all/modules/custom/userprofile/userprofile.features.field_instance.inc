@@ -30,6 +30,7 @@ function userprofile_field_default_field_instances() {
     'label' => 'Planned attendance',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => 0,
     ),
     'widget' => array(
@@ -61,6 +62,7 @@ function userprofile_field_default_field_instances() {
     'label' => 'About me',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => 0,
     ),
@@ -72,6 +74,38 @@ function userprofile_field_default_field_instances() {
       ),
       'type' => 'text_textarea',
       'weight' => 15,
+    ),
+  );
+
+  // Exported field_instance: 'user-user-field_user_category'
+  $field_instances['user-user-field_user_category'] = array(
+    'bundle' => 'user',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 6,
+      ),
+    ),
+    'entity_type' => 'user',
+    'field_name' => 'field_user_category',
+    'label' => 'User category',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => 0,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 52,
     ),
   );
 
@@ -95,6 +129,7 @@ function userprofile_field_default_field_instances() {
     'label' => 'First name',
     'required' => 1,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => 1,
     ),
@@ -129,6 +164,7 @@ function userprofile_field_default_field_instances() {
     'label' => 'Job title',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => 1,
     ),
@@ -163,6 +199,7 @@ function userprofile_field_default_field_instances() {
     'label' => 'Last name',
     'required' => 1,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => 1,
     ),
@@ -197,6 +234,7 @@ function userprofile_field_default_field_instances() {
     'label' => 'Organization',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => 1,
     ),
@@ -219,6 +257,7 @@ function userprofile_field_default_field_instances() {
   t('Last name');
   t('Organization');
   t('Planned attendance');
+  t('User category');
 
   return $field_instances;
 }
