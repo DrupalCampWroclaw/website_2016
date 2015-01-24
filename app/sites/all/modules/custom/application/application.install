@@ -232,4 +232,11 @@ function application_update_7032() {
     title_field_replacement_batch_set('node', $node_type, 'title');
   }
 
+  //Create featured speakers
+  $users = array('12', '14', '21');
+  foreach ($users as $user){
+    $user = user_load($user);
+    $user->field_user_category['und'][0]['value'] = 'featured';
+    user_save($user);
+  }
 }
