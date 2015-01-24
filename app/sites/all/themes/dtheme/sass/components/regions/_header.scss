@@ -22,6 +22,9 @@
 
     #header-bar-center-text {
       padding: 0 67px;
+      @media only screen and (max-width : $screen-mobile-max2 ) {
+        padding: 0;
+      }
     }
 
     #header-logo {
@@ -83,15 +86,15 @@
 
 
 
-#header-over-bg{
+#header-over-bg {
   background: url(../images/header-bg3.png) repeat-x;
-  height: 330px;
+  //height: 330px;
 }
 
 #header-over {
   height: 330px;
   @media (max-width: 480px) {
-    background: url(../images/header-bg2_480.png)  no-repeat center center;
+    //background: url(../images/header-bg2_480.png)  no-repeat center center;
   }
 
   @media (min-width: 481px) and (max-width: 959px) {
@@ -160,6 +163,11 @@
 
 // Layout header
 #header-bar-center {
+
+  #header-bar-center-mobile-menu {
+    display: none;
+  }
+
   @media all and (min-width: 960px) {
 
     #header-bar-center-text-left{
@@ -185,6 +193,101 @@
     #language-links {
 
     }
+  }
+
+  @media only screen and (max-width : $screen-mobile-max2 ) {
+    display: table;
+    width: 100%;
+    height: 45px !important;
+
+    #header-bar-center-text {
+      display: table-row;
+      width: 100%;
+
+
+      > div {
+        vertical-align: top;
+      }
+
+      #language-links,
+      #social-links {
+        display: none;
+      }
+
+
+      #header-bar-center-mobile-menu {
+        display: table-cell;
+        a {
+          display: block;
+          width: 45px;
+          height: 45px;
+          background: url(../images/mobile_menu.png) no-repeat;
+          text-indent: -2000px;
+          font-size: 0;
+        }
+      }
+
+      #header-bar-center-text-left {
+        display: table-cell;
+
+      }
+
+      #header-bar-center-text-right {
+        display: table-cell;
+
+      }
+
+      $padding_top_items: 1em;
+      #conference-statistics.header-bar-center-item {
+        margin: 0;
+        width: 100%;
+        margin: 0 10px 0 0 ;
+        padding: 0;
+        line-height: 1.6em;
+        font-size: $font-header-mobile;
+        ul {
+          width: 100%;
+          padding: 0;
+          padding-top: $padding_top_items;
+          li {
+            display: none;
+            padding: 0 5px 0 0;
+            a:after {
+              content: " ";
+            }
+          }
+          li:nth-child(1),
+          li:nth-child(2) {
+            display: inline;
+          }
+        }
+      }
+
+      #user-links.header-bar-center-item {
+        margin: 0;
+        float: none;
+        width: auto;
+        font-size: $font-header-mobile;
+        line-height: 1.6em;
+        text-align: right;
+        ul {
+          padding: 0;
+          padding-top: $padding_top_items;
+
+          float: right;
+          li {
+            display: inline;
+            padding: 0;
+            a:after {
+              content: " ";
+            }
+          }
+        }
+      }
+
+    }
+
+
   }
 
 }
