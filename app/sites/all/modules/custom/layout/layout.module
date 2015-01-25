@@ -106,7 +106,8 @@ function layout_theme($existing, $type, $theme, $path) {
 function layout_block_main_menu() {
   $output = '';
 
-  $output .= 'TODO';
+  $main_menu_tree = menu_tree('main-menu');
+  $output .= drupal_render($main_menu_tree);
 
   return $output;
 }
