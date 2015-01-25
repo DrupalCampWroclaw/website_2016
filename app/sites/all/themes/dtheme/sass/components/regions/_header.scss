@@ -21,7 +21,10 @@
     }
 
     #header-bar-center-text {
-      padding: 0 67px;
+      @media only screen and (min-width : $screen-desktop-min ) {
+        padding: 0 67px;
+      }
+
       @media only screen and (max-width : $screen-mobile-max2 ) {
         padding: 0;
       }
@@ -43,41 +46,14 @@
         height: 160px;
         background: url(../images/header_logo_to_767px.png) no-repeat top center;
       }
+
+      @media only screen and (min-width : $screen-tablet-min )and (max-width : $screen-tablet-max ) {
+        margin-top: 0;
+        height: 160px;
+        background: url(../images/header_logo_to_767px.png) no-repeat top center; // TO DO
+      }
     }
 
-    /*@media all and (max-width: 480px) {
-      background: url("../images/header-bar-center2.png") repeat-x;
-      #header-bar-center {
-        height:134px;
-      }
-      #header-bar-left {
-        background: url("../images/header-bar-left2.png") repeat-x;
-        height:134px;
-        width: 60px;
-      }
-      #header-bar-right {
-        background: url("../images/header-bar-right2.png") repeat-x;
-        height:134px;
-        width: 60px;
-      }
-    }*/
-
-    @media all and (min-width: 481px) and (max-width: 959px) {
-      /*  background: url("../images/header-bar-center3.png") repeat-x;
-       #header-bar-center {
-         height:100px;
-       }
-       #header-bar-left {
-         background: url("../images/header-bar-left3.png") repeat-x;
-         height:100px;
-
-       }
-       #header-bar-right {
-         background: url("../images/header-bar-right3.png") repeat-x;
-         height:100px;
-
-       } */
-    }
 
     @media all and (min-width: 960px) {
       max-width: 1289px;
@@ -93,23 +69,22 @@
 
 
 #header-over-bg {
-  background: url(../images/header-bg3.png) repeat-x;
-  //height: 330px;
+
 }
 
 #header-over {
   height: 330px;
   @media (max-width: $screen-mobile-max2) {
     height: 205px;
-    //background: url(../images/header-bg2_480.png)  no-repeat center center;
+
   }
 
-  @media (min-width: 481px) and (max-width: 959px) {
-    background: url(../images/header-bg2_959.png)  no-repeat center center;
+  @media only screen and (min-width : $screen-tablet-min )and (max-width : $screen-tablet-max ) {
+    height: 227px;
   }
 
-  @media (min-width: 960px) {
-    background: $color8 url(../images/header_bg_a1.png) no-repeat center center;
+  @media (min-width: $screen-desktop-min) {
+
   }
 }
 
@@ -175,7 +150,7 @@
     display: none;
   }
 
-  @media all and (min-width: 960px) {
+  @media all and (min-width: $screen-desktop-min) {
 
     #header-bar-center-text-left{
       float: left;
@@ -199,6 +174,64 @@
     }
     #language-links {
 
+    }
+  }
+
+  @media all and (min-width: $screen-tablet-min) and (max-width : $screen-tablet-max ) {
+    $screen-tablet-margin-top: 10px;
+
+    #header-bar-center-text{
+      padding: 0;
+    }
+
+
+    #header-bar-center-text-left{
+      float: left;
+    }
+    #header-bar-center-text-right{
+      float: right;
+    }
+
+    .header-bar-center-item{
+      float: left;
+    }
+
+    #social-links {
+      margin-top: $screen-tablet-margin-top;
+      margin-left: $screen-tablet-margin-top;
+    }
+
+
+    #conference-statistics.header-bar-center-item {
+      margin-top: $screen-tablet-margin-top;
+      padding: 0;
+      ul {
+        padding: 0;
+        li {
+          padding-top: 0;
+        }
+      }
+    }
+
+    #user-links.header-bar-center-item {
+      float: left;
+      width: auto;
+      margin: auto;
+
+      margin-top: $screen-tablet-margin-top;
+      padding: 0;
+      ul {
+        padding: 0;
+        li {
+          padding-top: 0;
+        }
+      }
+
+    }
+    #language-links {
+      float: right;
+      width: auto;
+      margin-right: $screen-tablet-margin-top;
     }
   }
 
@@ -446,14 +479,14 @@
   }
 
   @media all and (min-width: 481px) and (max-width: 959px) {
-    font-size: 0.9em;
+   /* font-size: 0.9em;
     $zen-column-count: 4 !global;
     #conference-statistics {
       @include zen-grid-item(3, 1);
     }
     #user-links {
       @include zen-grid-item(1, 4);
-    }
+    }*/
   }
 
   @media all and (min-width: 960px) {
