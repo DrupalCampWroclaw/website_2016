@@ -9,7 +9,7 @@
 ?>
 
 <div id="page-all">
-
+  <div id="mobile-menu-links"><?php print $main_menu_mobile; ?></div>
   <div id="header-over-bg">
     <div id="header-over">
       <div id="header-bar-full" class="clearfix">
@@ -17,7 +17,10 @@
           <div id="header-bar-center">
 
             <div id="header-bar-center-text" class="clearfix">
-              <div id="header-bar-center-mobile-menu"><a href="#" class="mobile-menu-button"><?php print t('Menu'); ?></a></div>
+              <div id="header-bar-center-mobile-menu">
+                <a href="#" class="mobile-menu-button"><?php print t('Menu'); ?></a>
+
+              </div>
               <div id="header-bar-center-text-left">
                 <div id="social-links"
                      class="header-bar-center-item"><?php print $sociallinks; ?></div>
