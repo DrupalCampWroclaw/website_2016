@@ -239,4 +239,14 @@ function application_update_7032() {
     $user->field_user_category['und'][0]['value'] = 'featured';
     user_save($user);
   }
+
+  // Expand all menu items in main menu.
+  $menu_items = menu_tree_all_data('main-menu', NULL, 1);
+  foreach ($menu_items as $menu_item) {
+    $link = $menu_item['link'];
+    $mlid = $link['mlid'];
+    $menu_item_loaded = menu_link_load($mlid);
+    $menu_item_loaded['expanded'] = 1;
+    menu_link_save($menu_item_loaded);
+  }
 }
