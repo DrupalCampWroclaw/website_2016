@@ -2339,7 +2339,7 @@ table tr:hover td {
     z-index: 200000;
   }
   /* line 127, ../sass/components/blocks/_block-layout-main-menu.scss */
-  #mobile-menu-links ul .menu-item-expand-link a {
+  #mobile-menu-links ul .menu-item-expand-link span {
     display: block;
     height: 54px;
     width: 54px;
@@ -2347,6 +2347,8 @@ table tr:hover td {
     text-align: center;
     font-weight: bold;
     line-height: 54px;
+    color: #ffffff;
+    cursor: pointer;
   }
 }
 
