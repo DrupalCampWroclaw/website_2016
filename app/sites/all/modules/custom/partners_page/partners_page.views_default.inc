@@ -119,7 +119,7 @@ function partners_page_views_default_views() {
   $handler->display->display_options['filters']['field_partner_type_value']['value'] = array(
     'media_partners' => 'media_partners',
   );
-  $handler->display->display_options['path'] = 'partners-page';
+  $handler->display->display_options['path'] = 'partners';
 
   /* Display: Attachment */
   $handler = $view->new_display('attachment', 'Attachment', 'attachment_1');
