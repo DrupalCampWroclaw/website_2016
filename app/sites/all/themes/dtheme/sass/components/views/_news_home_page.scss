@@ -1,0 +1,19 @@
+.view-news-frontpage {
+  .node-title {
+    a {
+      text-decoration: none;
+    }
+  }
+  .submitted {
+    color: #007aac;
+  }
+
+  .node-read-more {
+    float: right;
+    width: 100%;
+    position: static;
+    .links {
+      float: right;
+    }
+  }
+}
