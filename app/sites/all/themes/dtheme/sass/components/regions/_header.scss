@@ -1,5 +1,7 @@
 #header-bar-full{
-  background: url("../images/header_bg_1.png") repeat-x;
+  background: url("../images/bg_02.png") repeat-x;
+  background-size:100%;
+  background-position:center;
 
   color: $color6;
 
@@ -376,7 +378,8 @@
       background: url(../images/social_twitter.png) no-repeat;
     }
     .gplus {
-      background: url(../images/social_linkedin.png) no-repeat;
+      background: url(../images/social_gplus.png) no-repeat;
+      background-size:25px;
     }
     .linkedin {
       background: url(../images/social_linkedin.png) no-repeat;
