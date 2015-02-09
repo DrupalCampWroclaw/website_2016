@@ -253,6 +253,13 @@
     height: 45px !important;
     background: url("../images/header_bg_2.png") 0 0 repeat-x;
 
+    ul
+    {
+      li {
+        line-height: 45px;
+      }
+    }
+
     #header-bar-center-text {
       display: table-row;
       width: 100%;
@@ -290,7 +297,11 @@
 
       #header-bar-center-text-left {
         display: table-cell;
-
+        ul {
+          li {
+            line-height: 45px;
+          }
+        }
       }
 
       #header-bar-center-text-right {

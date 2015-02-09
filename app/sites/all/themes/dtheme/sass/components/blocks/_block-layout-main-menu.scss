@@ -8,16 +8,19 @@
   ul.menu {
     margin: 0;
     padding: 0;
-    text-align: center;
+    text-align: left;
     text-transform: uppercase;
     position: relative;
+    margin-left: -0.5em;
     > li {
       display: inline-block;
       height: 42px;
       line-height: 42px;
       a {
         color: $color_white;
-        padding: 0 1em;
+        padding: 0 1.5em;
+        font-family: $bree;
+        font-size: 14px;
       }
     }
 
@@ -69,11 +72,19 @@
     }
 
     @media only screen and (min-width : $screen-tablet-min )and (max-width : $screen-tablet-max ) {
-      > li {
-        a {
-          padding: 0 4px;
+      margin-left: 0;
+        > li {
+
+          li {
+            a {
+              padding: 0 6px;
+            }
+          }
+          a {
+            padding: 0 10px;
+          }
         }
-      }
+
     }
   }
 }
@@ -97,6 +108,8 @@
     a {
       color: $color_white;
       text-decoration: none;
+      font-family: $bree;
+      font-size: 18px;
     }
     ul {
       margin: 0;
@@ -110,7 +123,12 @@
         display: block;
         ul {
           display: none;
-
+          li {
+            a {
+              text-transform: none;
+              font-size: 15px;
+            }
+          }
         }
       }
       li.open {
