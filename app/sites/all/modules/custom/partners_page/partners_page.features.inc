@@ -43,7 +43,7 @@ function partners_page_image_default_styles() {
         'data' => array(
           'width' => 450,
           'height' => 300,
-          'upscale' => 0,
+          'upscale' => 1,
         ),
         'weight' => 1,
       ),

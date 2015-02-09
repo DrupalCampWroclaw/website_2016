@@ -114,6 +114,5 @@ function sponsor_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-
   return $field_bases;
 }

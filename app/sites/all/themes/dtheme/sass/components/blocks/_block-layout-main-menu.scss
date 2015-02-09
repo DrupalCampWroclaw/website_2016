@@ -29,7 +29,7 @@
     }
 
     > li.active-trail {
-      background: $color12;
+      background: lighten($red1, 3%);
     }
 
     li.expanded {

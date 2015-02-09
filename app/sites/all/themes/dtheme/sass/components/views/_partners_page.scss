@@ -3,18 +3,42 @@
     clear: both;
     width: 100%;
   .view-content {
-float:left;
+    float:left;
     clear: both;
     width: 100%;
-    h3{
+    h3 {
       text-align: center;
+      font-size: 30px;
+      color: $blue1;
+      padding-bottom: 10px;
     }
     .views-row {
+      width: 50%;
       float: left;
-      width: auto;
       .field-content {
-        padding: 0 0.2em 0.2em 0.2em;
+        padding: 0 0.5em 1em 0.5em;
         text-align: center;
+      }
+
+      &.views-row-odd {
+        .field-content {
+          padding: 0 0.2em 1.2em 0;
+          text-align: left;
+        }
+      }
+      &.views-row-even {
+        .field-content {
+          padding: 0 0 1.2em 0.2em;
+          text-align: right;
+        }
+      }
+
+      @media only screen and (max-width : $screen-tablet-min ) {
+        width: 100%;
+        .field-content {
+          padding: 0 0.5em 1em 0.5em;
+          text-align: center;
+        }
       }
     }
   }
