@@ -2,8 +2,8 @@
 // Font faces, stacks and sizes.
 //
 
-$base-font-size:   16px; // The font size set on the root html element.
-$base-line-height: $base-font-size*1.4; // This line-height determines the basic unit of vertical rhythm.
+$base-font-size:   14px; // The font size set on the root html element.
+$base-line-height: 22px; // This line-height determines the basic unit of vertical rhythm.
 
 $font-size-p: 16px;
 
@@ -52,11 +52,17 @@ $helvetica:       Helvetica, Arial, "Nimbus Sans L", sans-serif;
 $arial:           Arial, Helvetica, "Nimbus Sans L", sans-serif;
 $courier:         "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
 
+@import url(http://fonts.googleapis.com/css?family=Bree+Serif&subset=latin,latin-ext);
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic&subset=latin,cyrillic,latin-ext,greek,greek-ext,cyrillic-ext);
+
+$bree:            'Bree Serif', serif;
+$ubuntu:          'Ubuntu', sans-serif;
 
 
 
-$base-font-family: $arial; // The font family set on the html element.
-$font-body:        $arial;
+
+$base-font-family: $ubuntu; // The font family set on the html element.
+$font-body:        $ubuntu;
 $font-monospace:   $courier;
 
 
