@@ -76,10 +76,21 @@ $max-page-width: $width-page;
 }
 
 #page-bottom-links-over,
-#main,
 #footer {
   .block {
-    background: $bg1;
+    background: none;
+    padding: 0.5em 1em;
+    h2.block-title {
+      color: $red1;
+      text-transform: uppercase;
+      line-height: 1.7em;
+    }
+  }
+}
+
+#main {
+  .block {
+    background: none;
     padding: 0.5em 1em;
     h2.block-title {
       color: $red1;
