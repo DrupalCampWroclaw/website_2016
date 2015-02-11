@@ -2554,6 +2554,57 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 #footer #page-bottom-links {
   background: #534a3f;
   position: relative;
+  display: table;
+  padding: 0;
+}
+/* line 11, ../sass/components/regions/_footer.scss */
+#footer #page-bottom-links ul {
+  margin: 0;
+  padding: 0;
+}
+/* line 14, ../sass/components/regions/_footer.scss */
+#footer #page-bottom-links ul li {
+  list-style: none;
+  display: inline;
+  padding: 0 1.4em;
+  line-height: 37px;
+}
+/* line 19, ../sass/components/regions/_footer.scss */
+#footer #page-bottom-links ul li a {
+  font-size: 13px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #e1e0d7;
+  text-decoration: none;
+}
+/* line 27, ../sass/components/regions/_footer.scss */
+#footer #page-bottom-links ul li a:hover {
+  text-decoration: underline;
+}
+/* line 33, ../sass/components/regions/_footer.scss */
+#footer #page-bottom-links:after {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 18.5px 14px 18.5px 0;
+  border-color: transparent #e1e0d7 transparent transparent;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+/* line 44, ../sass/components/regions/_footer.scss */
+#footer #page-bottom-links:before {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 18.5px 0 18.5px 14px;
+  border-color: transparent transparent transparent #e1e0d7;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 /* line 1, ../sass/components/regions/_global.scss */
