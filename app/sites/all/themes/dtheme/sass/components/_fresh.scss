@@ -85,6 +85,7 @@ $max-page-width: $width-page;
   .block {
     background: none;
     padding: 0.5em 1em;
+    @include box-sizing(border-box);
     h2.block-title {
       color: $red1;
       text-transform: uppercase;
