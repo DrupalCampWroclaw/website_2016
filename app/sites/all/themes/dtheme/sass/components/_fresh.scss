@@ -98,9 +98,16 @@ $max-page-width: $width-page;
     background: none;
     padding: 0.5em 1em;
     h2.block-title {
-      color: $red1;
+      color: $gray4;
       text-transform: uppercase;
-      line-height: 1.7em;
+      line-height: 30px;
+      font-size: 18px;
+      background: url("../images/header_bg_1.png") 0 0 repeat;
+      font-family: $bree;
+      font-weight: 400;
+      @media only screen and (min-width : $screen-mobile-mid ) and (max-width: $screen-tablet-min) {
+        font-size: 14px;
+      }
     }
   }
 }
