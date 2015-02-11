@@ -1,7 +1,7 @@
 name = News
 core = 7.x
 package = APP
-version = 7.x-1.0-beta3
+version = 7.x-1.0-beta4
 project = news
 dependencies[] = image
 dependencies[] = page
@@ -26,5 +26,4 @@ features[views_view][] = news_frontpage
 features_exclude[dependencies][ctools] = ctools
 features_exclude[dependencies][features] = features
 features_exclude[dependencies][strongarm] = strongarm
-mtime = 1421530492
 project status url = http://updates-drupal.drupalcampwroclaw.pl/release-history

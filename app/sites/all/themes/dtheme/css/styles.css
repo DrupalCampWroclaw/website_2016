@@ -2550,6 +2550,11 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   background: url("../images/footer_bg.jpg") 0 -10px no-repeat #e1e0d7;
   border-top: 3px solid #bfbfb8;
 }
+/* line 6, ../sass/components/regions/_footer.scss */
+#footer #page-bottom-links {
+  background: #534a3f;
+  position: relative;
+}
 
 /* line 1, ../sass/components/regions/_global.scss */
 #main-over {

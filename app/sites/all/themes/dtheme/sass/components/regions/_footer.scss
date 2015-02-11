@@ -2,4 +2,9 @@
   margin-top: 0;
   background: url("../images/footer_bg.jpg") 0 -10px no-repeat $color11;
   border-top: 3px solid $color16;
+
+  #page-bottom-links {
+    background: $color6;
+    position: relative;
+  }
 }
