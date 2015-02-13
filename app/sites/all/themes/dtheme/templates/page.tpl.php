@@ -31,7 +31,7 @@
               <div id="header-bar-center-text-right">
                 <div id="user-links"
                      class="header-bar-center-item"><?php print $userlinks; ?></div>
-                <?php /* 
+                <?php /*
                 <div id="language-links"
                      class="header-bar-center-item"><?php print $language_links; ?></div> */?>
               </div>
