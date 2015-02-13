@@ -261,4 +261,14 @@ function application_update_7032() {
     'module' => 'menu',
   );
   menu_link_save($item);
+
+
+  // Update block content.
+  $query = "UPDATE  `drupalcamp`.`block_custom` SET  `body` =  '<ul>
+	<li>01.02.2015 - 30.04.2015 Call for papers.</li>
+	<li>01.05.2015 - 15.05.2015 Voting for sessions.</li>
+	<li>29 - 31.05.2015 DrupalCamp Wroclaw</li>
+</ul>
+  ' WHERE  `block_custom`.`bid` =2;";
+  db_query($query);
 }
