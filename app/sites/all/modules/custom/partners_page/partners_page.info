@@ -1,7 +1,7 @@
 name = Partners page
 core = 7.x
 package = APP
-version = 7.x-1.0-beta3
+version = 7.x-1.0-beta4
 project = partners_page
 dependencies[] = image
 dependencies[] = link

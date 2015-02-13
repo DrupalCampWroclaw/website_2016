@@ -120,7 +120,6 @@ function partners_page_views_default_views() {
     'media_partners' => 'media_partners',
   );
   $handler->display->display_options['path'] = 'partners';
-  $handler->display->display_options['menu']['type'] = 'normal';
   $handler->display->display_options['menu']['title'] = 'Partners';
   $handler->display->display_options['menu']['weight'] = '0';
   $handler->display->display_options['menu']['name'] = 'main-menu';

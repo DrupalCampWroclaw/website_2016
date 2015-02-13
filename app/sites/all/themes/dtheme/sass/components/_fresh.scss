@@ -167,30 +167,7 @@ $max-page-width: $width-page;
   }
 }
 
-.view-speakers,
-.view-people{
-  clear: both;
-  float: left;
-  width: 100%;
-  .view-content {
-    clear: both;
-    float: left;
-    width: 100%;
-  }
-  .views-row{
-    font-size: 0.9em;
-    float: left;
-    margin: 1em;
-    width: 150px;
-    height: 250px;
-    overflow: hidden;
-    text-align: center;
 
-    p {
-      margin:0 ;
-    }
-  }
-}
 
 #page-bottom-links-over{
   margin-top: 1em;
