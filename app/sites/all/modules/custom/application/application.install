@@ -326,4 +326,6 @@ function application_update_7035() {
   // Flush caches.
   drupal_flush_all_caches();
   application_api_features_revert(application_features_list());
+
+  application_api_update_translations();
 }
