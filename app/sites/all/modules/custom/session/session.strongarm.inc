@@ -115,7 +115,7 @@ function session_strongarm() {
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '30',
+          'weight' => '9',
         ),
       ),
       'display' => array(),
