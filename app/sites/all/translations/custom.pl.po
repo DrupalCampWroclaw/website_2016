@@ -299,7 +299,7 @@ msgstr ""
 
 #: layout/layout.module:58
 msgid "Social media profiles"
-msgstr ""
+msgstr "Profile w portalach społecznościowych"
 
 #: layout/layout.module:62
 msgid "Flickr gallery"
