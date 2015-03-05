@@ -319,6 +319,8 @@ function application_update_7035() {
   // Enable modules.
   $module_list = array(
     'navigation404',
+    'bean',
+    'bean_admin_ui',
   );
   module_enable($module_list);
   module_list(TRUE, FALSE);
