@@ -16,7 +16,7 @@ function application_install() {
   $module_list = array(
     'node',
     'layout',
-    'backup_migrate',
+    'backup_migrate'
   );
   module_enable($module_list);
   module_list(TRUE, FALSE);
@@ -460,4 +460,20 @@ function application_update_7036() {
   application_api_features_revert(application_features_list());
 
   application_api_update_translations();
+}
+
+/**
+ * Update 2015-03-16: Enable GlobalRedirect module.
+ */
+
+function application_update_7037() {
+
+  $module_list = array(
+    'globalredirect'
+  );
+  module_enable($module_list);
+  module_list(TRUE, FALSE);
+  // Flush caches.
+  drupal_flush_all_caches();
+
 }
