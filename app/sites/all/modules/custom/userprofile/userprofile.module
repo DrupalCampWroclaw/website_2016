@@ -48,3 +48,16 @@ function userprofile_header_bar() {
 
   return $output;
 }
+
+/**
+ * Implements hook_form_alter().
+ */
+function userprofile_form_alter(&$form, &$form_state, $form_id) {
+    switch ($form_id) {
+      case 'user_profile_form':
+        drupal_add_js(drupal_get_path('module', 'userprofile') .'/js/script.js');
+        break;
+      default:
+        break;
+    }
+}
