@@ -17,6 +17,15 @@
                 $('input:checkbox[value=sunday]').attr('checked',false);
 
             });
+
+            if($("#edit-field-attendance-und-no").is(':checked')) {
+
+                $('.form-item-field-attendance-und-friday').hide();
+                $('.form-item-field-attendance-und-saturday').hide();
+                $('.form-item-field-attendance-und-sunday').hide();
+
+            }
+
         }
     };
 
