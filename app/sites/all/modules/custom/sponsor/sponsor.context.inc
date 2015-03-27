@@ -29,7 +29,7 @@ function sponsor_context_default_contexts() {
         'bean-sponsor-text' => array(
           'module' => 'bean',
           'delta' => 'sponsor-text',
-          'region' => 'content',
+          'region' => 'content_top',
           'weight' => '-10',
         ),
       ),
