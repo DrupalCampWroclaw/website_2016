@@ -491,11 +491,12 @@ function application_update_7038() {
     LANGUAGE_NONE => array(
       0 => array(
         'format' => 'full_html',
-        'value' => '<p>With our proposal we would like to encourage you to help with organization of the third conference in Poland devoted to CMS Drupal.
-                  We believe that the event will attract many experts, at the same time allowing you to promote your own business.
+        'value' => '<p>With our proposal we would like to encourage you to help with organization of the third conference in Poland devoted to CMS Drupal. We believe that the event will attract many experts, at the same time allowing you to promote your own business.
                   <a href="http://www.drupalcampwroclaw.pl/downloadfiles/sponsorship_offer.pdf">Click here to download Sponsorship offer in PDF</a></p>',
       ),
     ),
   );
   $bean->save();
+
+  drupal_flush_all_caches();
 }
