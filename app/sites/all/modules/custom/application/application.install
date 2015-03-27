@@ -477,3 +477,25 @@ function application_update_7037() {
   drupal_flush_all_caches();
 
 }
+
+/*
+ * Text on sponsors page.
+ */
+
+function application_update_7038() {
+  $bean = bean_create(array('type' => 'simple_block_with_translations'));
+  $bean->label = 'Sponsors text';
+  $bean->title = '';
+  $bean->delta = 'sponsor-text';
+  $bean->field_block_content = array(
+    LANGUAGE_NONE => array(
+      0 => array(
+        'format' => 'full_html',
+        'value' => '<p>With our proposal we would like to encourage you to help with organization of the third conference in Poland devoted to CMS Drupal.
+                  We believe that the event will attract many experts, at the same time allowing you to promote your own business.
+                  <a href="http://www.drupalcampwroclaw.pl/downloadfiles/sponsorship_offer.pdf">Click here to download Sponsorship offer in PDF</a></p>',
+      ),
+    ),
+  );
+  $bean->save();
+}
