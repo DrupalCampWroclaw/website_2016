@@ -13,7 +13,10 @@ function sponsor_user_default_permissions() {
   // Exported permission: 'view any simple_block_with_translations bean'.
   $permissions['view any simple_block_with_translations bean'] = array(
     'name' => 'view any simple_block_with_translations bean',
-    'roles' => array(),
+    'roles' => array(
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+    ),
     'module' => 'bean',
   );
 
