@@ -70,7 +70,6 @@ function userprofile_header_bar() {
  */
 function userprofile_tshirt_size_validate($form, &$form_state) {
 
-  //dsm($form_state['values'], '$form_state');
   $bad_value = taxonomy_get_term_by_name('Men');
   $bad_value2 = taxonomy_get_term_by_name('Women');
   $size = $form_state['values']['field_user_tshirt_size']['en'][0]['tid'];
