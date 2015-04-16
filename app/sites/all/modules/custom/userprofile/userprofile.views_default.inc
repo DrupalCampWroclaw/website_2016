@@ -247,6 +247,133 @@ function userprofile_views_default_views() {
   $export['people'] = $view;
 
   $view = new view();
+  $view->name = 'tshirts';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'users';
+  $view->human_name = 'T-shirts';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = 'T-shirts';
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['group_by'] = TRUE;
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['access']['perm'] = 'access user profiles';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['style_plugin'] = 'table';
+  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
+  $handler->display->display_options['style_options']['columns'] = array(
+    'php' => 'php',
+    'field_user_tshirt_size' => 'field_user_tshirt_size',
+    'field_user_tshirt_size_1' => 'field_user_tshirt_size_1',
+  );
+  $handler->display->display_options['style_options']['default'] = 'field_user_tshirt_size';
+  $handler->display->display_options['style_options']['info'] = array(
+    'php' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_user_tshirt_size' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_user_tshirt_size_1' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+  );
+  $handler->display->display_options['style_options']['override'] = FALSE;
+  /* No results behavior: Global: Text area */
+  $handler->display->display_options['empty']['area']['id'] = 'area';
+  $handler->display->display_options['empty']['area']['table'] = 'views';
+  $handler->display->display_options['empty']['area']['field'] = 'area';
+  $handler->display->display_options['empty']['area']['empty'] = TRUE;
+  $handler->display->display_options['empty']['area']['content'] = 'No results yet.';
+  $handler->display->display_options['empty']['area']['format'] = 'filtered_html';
+  /* Field: Global: PHP */
+  $handler->display->display_options['fields']['php']['id'] = 'php';
+  $handler->display->display_options['fields']['php']['table'] = 'views';
+  $handler->display->display_options['fields']['php']['field'] = 'php';
+  $handler->display->display_options['fields']['php']['label'] = '';
+  $handler->display->display_options['fields']['php']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['php']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['php']['use_php_setup'] = 0;
+  $handler->display->display_options['fields']['php']['php_output'] = '<?php
+if(isset($data->field_field_user_tshirt_size[0]) && !empty($data->field_field_user_tshirt_size[0])) {
+  $tid = $data->field_field_user_tshirt_size[0][\'raw\'][\'tid\'];
+  $parent = taxonomy_get_parents($tid);
+  print reset($parent)->name;
+}
+?>';
+  $handler->display->display_options['fields']['php']['use_php_click_sortable'] = '0';
+  $handler->display->display_options['fields']['php']['php_click_sortable'] = '';
+  /* Field: User: T-shirt size */
+  $handler->display->display_options['fields']['field_user_tshirt_size']['id'] = 'field_user_tshirt_size';
+  $handler->display->display_options['fields']['field_user_tshirt_size']['table'] = 'field_data_field_user_tshirt_size';
+  $handler->display->display_options['fields']['field_user_tshirt_size']['field'] = 'field_user_tshirt_size';
+  $handler->display->display_options['fields']['field_user_tshirt_size']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_user_tshirt_size']['alter']['text'] = '[php]/[field_user_tshirt_size]';
+  $handler->display->display_options['fields']['field_user_tshirt_size']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_user_tshirt_size']['type'] = 'taxonomy_term_reference_plain';
+  $handler->display->display_options['fields']['field_user_tshirt_size']['group_columns'] = array(
+    'tid' => 'tid',
+  );
+  /* Field: COUNT(User: T-shirt size) */
+  $handler->display->display_options['fields']['field_user_tshirt_size_1']['id'] = 'field_user_tshirt_size_1';
+  $handler->display->display_options['fields']['field_user_tshirt_size_1']['table'] = 'field_data_field_user_tshirt_size';
+  $handler->display->display_options['fields']['field_user_tshirt_size_1']['field'] = 'field_user_tshirt_size';
+  $handler->display->display_options['fields']['field_user_tshirt_size_1']['group_type'] = 'count';
+  $handler->display->display_options['fields']['field_user_tshirt_size_1']['label'] = 'Number of T-shirts';
+  $handler->display->display_options['fields']['field_user_tshirt_size_1']['separator'] = ', ';
+  /* Filter criterion: STDDEV_POP(User: T-shirt size (field_user_tshirt_size)) */
+  $handler->display->display_options['filters']['field_user_tshirt_size_tid']['id'] = 'field_user_tshirt_size_tid';
+  $handler->display->display_options['filters']['field_user_tshirt_size_tid']['table'] = 'field_data_field_user_tshirt_size';
+  $handler->display->display_options['filters']['field_user_tshirt_size_tid']['field'] = 'field_user_tshirt_size_tid';
+  $handler->display->display_options['filters']['field_user_tshirt_size_tid']['group_type'] = 'stddev_pop';
+  $handler->display->display_options['filters']['field_user_tshirt_size_tid']['operator'] = 'not empty';
+
+  /* Display: Page */
+  $handler = $view->new_display('page', 'Page', 'page');
+  $handler->display->display_options['path'] = 'admin/application/tshirts';
+  $handler->display->display_options['menu']['type'] = 'normal';
+  $handler->display->display_options['menu']['title'] = 'T-shirts';
+  $handler->display->display_options['menu']['weight'] = '0';
+  $handler->display->display_options['menu']['name'] = 'management';
+  $handler->display->display_options['menu']['context'] = 0;
+  $handler->display->display_options['menu']['context_only_inline'] = 0;
+  $translatables['tshirts'] = array(
+    t('Master'),
+    t('T-shirts'),
+    t('more'),
+    t('Apply'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('No results yet.'),
+    t('T-shirt size'),
+    t('[php]/[field_user_tshirt_size]'),
+    t('Number of T-shirts'),
+    t('Page'),
+  );
+  $export['tshirts'] = $view;
+
+  $view = new view();
   $view->name = 'users_list';
   $view->description = '';
   $view->tag = 'default';
@@ -326,7 +453,7 @@ function userprofile_views_default_views() {
       'empty_column' => 0,
     ),
   );
-  /* Field: Broken/missing handler */
+  /* Field: Bulk operations: User */
   $handler->display->display_options['fields']['views_bulk_operations']['id'] = 'views_bulk_operations';
   $handler->display->display_options['fields']['views_bulk_operations']['table'] = 'users';
   $handler->display->display_options['fields']['views_bulk_operations']['field'] = 'views_bulk_operations';
@@ -454,7 +581,7 @@ function userprofile_views_default_views() {
     t('Sort by'),
     t('Asc'),
     t('Desc'),
-    t('Broken handler users.views_bulk_operations'),
+    t('User'),
     t('Uid'),
     t('Last name'),
     t('First name'),
@@ -466,6 +593,108 @@ function userprofile_views_default_views() {
     t('Page'),
   );
   $export['users_list'] = $view;
+
+  $view = new view();
+  $view->name = 'users_tshirts';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'users';
+  $view->human_name = 'Users T-shirts';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = 'User T-shirts';
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['access']['perm'] = 'access user profiles';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['style_plugin'] = 'table';
+  /* Field: User: Uid */
+  $handler->display->display_options['fields']['uid']['id'] = 'uid';
+  $handler->display->display_options['fields']['uid']['table'] = 'users';
+  $handler->display->display_options['fields']['uid']['field'] = 'uid';
+  $handler->display->display_options['fields']['uid']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['uid']['link_to_user'] = FALSE;
+  /* Field: User: Name */
+  $handler->display->display_options['fields']['name']['id'] = 'name';
+  $handler->display->display_options['fields']['name']['table'] = 'users';
+  $handler->display->display_options['fields']['name']['field'] = 'name';
+  $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
+  /* Field: User: E-mail */
+  $handler->display->display_options['fields']['mail']['id'] = 'mail';
+  $handler->display->display_options['fields']['mail']['table'] = 'users';
+  $handler->display->display_options['fields']['mail']['field'] = 'mail';
+  $handler->display->display_options['fields']['mail']['element_default_classes'] = FALSE;
+  /* Field: Global: PHP */
+  $handler->display->display_options['fields']['php']['id'] = 'php';
+  $handler->display->display_options['fields']['php']['table'] = 'views';
+  $handler->display->display_options['fields']['php']['field'] = 'php';
+  $handler->display->display_options['fields']['php']['label'] = '';
+  $handler->display->display_options['fields']['php']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['php']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['php']['use_php_setup'] = 0;
+  $handler->display->display_options['fields']['php']['php_output'] = '<?php
+if(isset($data->field_field_user_tshirt_size[0]) && !empty($data->field_field_user_tshirt_size[0])) {
+  $tid = $data->field_field_user_tshirt_size[0][\'raw\'][\'tid\'];
+  $parent = taxonomy_get_parents($tid);
+  print reset($parent)->name;
+}
+?>';
+  $handler->display->display_options['fields']['php']['use_php_click_sortable'] = '0';
+  $handler->display->display_options['fields']['php']['php_click_sortable'] = '';
+  /* Field: User: T-shirt size */
+  $handler->display->display_options['fields']['field_user_tshirt_size']['id'] = 'field_user_tshirt_size';
+  $handler->display->display_options['fields']['field_user_tshirt_size']['table'] = 'field_data_field_user_tshirt_size';
+  $handler->display->display_options['fields']['field_user_tshirt_size']['field'] = 'field_user_tshirt_size';
+  $handler->display->display_options['fields']['field_user_tshirt_size']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_user_tshirt_size']['alter']['text'] = '[php]/[field_user_tshirt_size]';
+  $handler->display->display_options['fields']['field_user_tshirt_size']['type'] = 'taxonomy_term_reference_plain';
+  /* Sort criterion: User: Created date */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'users';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  /* Filter criterion: User: Active */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'users';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = '1';
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+
+  /* Display: Page */
+  $handler = $view->new_display('page', 'Page', 'page');
+  $handler->display->display_options['path'] = 'admin/application/users-tshirts';
+  $handler->display->display_options['menu']['type'] = 'normal';
+  $handler->display->display_options['menu']['title'] = 'Users T-shirts';
+  $handler->display->display_options['menu']['weight'] = '0';
+  $handler->display->display_options['menu']['name'] = 'management';
+  $handler->display->display_options['menu']['context'] = 0;
+  $handler->display->display_options['menu']['context_only_inline'] = 0;
+  $translatables['users_tshirts'] = array(
+    t('Master'),
+    t('User T-shirts'),
+    t('more'),
+    t('Apply'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('Uid'),
+    t('Name'),
+    t('E-mail'),
+    t('T-shirt size'),
+    t('[php]/[field_user_tshirt_size]'),
+    t('Page'),
+  );
+  $export['users_tshirts'] = $view;
 
   $view = new view();
   $view->name = 'views_send_mail';
@@ -532,7 +761,7 @@ function userprofile_views_default_views() {
   $handler->display->display_options['fields']['mail']['id'] = 'mail';
   $handler->display->display_options['fields']['mail']['table'] = 'users';
   $handler->display->display_options['fields']['mail']['field'] = 'mail';
-  /* Field: Broken/missing handler */
+  /* Field: Global: Send e-mail */
   $handler->display->display_options['fields']['views_send']['id'] = 'views_send';
   $handler->display->display_options['fields']['views_send']['table'] = 'views';
   $handler->display->display_options['fields']['views_send']['field'] = 'views_send';
@@ -630,7 +859,7 @@ function userprofile_views_default_views() {
     t('Asc'),
     t('Desc'),
     t('E-mail'),
-    t('Broken handler views.views_send'),
+    t('Send e-mail'),
     t('Active'),
     t('Name'),
     t('Roles'),
