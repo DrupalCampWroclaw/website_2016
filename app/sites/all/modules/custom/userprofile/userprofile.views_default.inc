@@ -304,6 +304,20 @@ function userprofile_views_default_views() {
     ),
   );
   $handler->display->display_options['style_options']['override'] = FALSE;
+  /* Footer: Global: PHP */
+  $handler->display->display_options['footer']['php']['id'] = 'php';
+  $handler->display->display_options['footer']['php']['table'] = 'views';
+  $handler->display->display_options['footer']['php']['field'] = 'php';
+  $handler->display->display_options['footer']['php']['php_output'] = '<?php
+$sum = array();
+$num_values = count($results);
+for ($i = 0; $i < $num_values; $i++) {
+  $value = $results[$i]->field_data_field_user_tshirt_size_delta;
+  array_push($sum, $value);
+}
+echo "Łącznie koszulek: " . array_sum($sum);
+?>
+';
   /* No results behavior: Global: Text area */
   $handler->display->display_options['empty']['area']['id'] = 'area';
   $handler->display->display_options['empty']['area']['table'] = 'views';
