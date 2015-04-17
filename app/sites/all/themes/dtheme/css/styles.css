@@ -2412,6 +2412,11 @@ table tr:hover td {
   }
 }
 
+/* line 2, ../sass/components/blocks/_block_sponsors-frontpage.scss */
+#block-views-sponsors-frontpage-block-block .view-footer {
+  margin-top: 20px;
+}
+
 /* line 1, ../sass/components/menu/_mainmenu.scss */
 #mainmenu {
   padding: 0;
