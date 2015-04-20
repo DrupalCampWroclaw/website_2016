@@ -2202,6 +2202,11 @@ tr.selected td {
   background-image: url('../images/progress.gif?1425371409');
 }
 
+/* line 809, ../sass/components/_misc.scss */
+iframe, object, embed {
+  max-width: 100%;
+}
+
 /* line 1, ../sass/components/_table.scss */
 table {
   width: 100%;
