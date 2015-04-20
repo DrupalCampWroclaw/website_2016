@@ -3368,6 +3368,21 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   margin: 0;
 }
 
+/* line 2, ../sass/components/views/_sessions.scss */
+.view-sessions .view-content {
+  width: 100%;
+  margin-bottom: 15px;
+  overflow-y: hidden;
+  border: 1px solid #DDD;
+  min-height: 0.01%;
+  overflow-x: auto;
+}
+/* line 9, ../sass/components/views/_sessions.scss */
+.view-sessions .view-content .views-table {
+  width: 100%;
+  max-width: 100%;
+}
+
 /* SMACSS theme rules */
 /* @import "theme-A"; */
 /* @import "theme-B"; */
