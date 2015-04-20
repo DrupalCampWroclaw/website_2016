@@ -9,6 +9,10 @@
     .views-table {
       width: 100%;
       max-width: 100%;
+      caption {
+        padding-bottom: 10px;
+        font-weight: bold;
+      }
     }
   }
 }

@@ -30,12 +30,20 @@ function session_views_default_views() {
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['style_plugin'] = 'table';
+  $handler->display->display_options['style_options']['grouping'] = array(
+    0 => array(
+      'field' => 'field_session_type',
+      'rendered' => 1,
+      'rendered_strip' => 0,
+    ),
+  );
   $handler->display->display_options['style_options']['columns'] = array(
     'title' => 'title',
     'field_session_experience_level' => 'field_session_experience_level',
     'field_session_speakers' => 'field_session_speakers',
     'field_session_language' => 'field_session_language',
     'count' => 'count',
+    'field_session_type' => 'field_session_type',
   );
   $handler->display->display_options['style_options']['default'] = 'count';
   $handler->display->display_options['style_options']['info'] = array(
@@ -54,8 +62,6 @@ function session_views_default_views() {
       'empty_column' => 0,
     ),
     'field_session_speakers' => array(
-      'sortable' => 1,
-      'default_sort_order' => 'asc',
       'align' => '',
       'separator' => '',
       'empty_column' => 0,
@@ -70,6 +76,13 @@ function session_views_default_views() {
     'count' => array(
       'sortable' => 1,
       'default_sort_order' => 'desc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_session_type' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
       'align' => '',
       'separator' => '',
       'empty_column' => 0,
@@ -114,6 +127,11 @@ function session_views_default_views() {
   $handler->display->display_options['fields']['count']['relationship'] = 'flag_count_rel';
   $handler->display->display_options['fields']['count']['label'] = 'Votes';
   $handler->display->display_options['fields']['count']['separator'] = ' ';
+  /* Field: Content: Session type */
+  $handler->display->display_options['fields']['field_session_type']['id'] = 'field_session_type';
+  $handler->display->display_options['fields']['field_session_type']['table'] = 'field_data_field_session_type';
+  $handler->display->display_options['fields']['field_session_type']['field'] = 'field_session_type';
+  $handler->display->display_options['fields']['field_session_type']['exclude'] = TRUE;
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
@@ -170,6 +188,7 @@ function session_views_default_views() {
     t('Votes'),
     t('.'),
     t(' '),
+    t('Session type'),
     t('Page'),
     t('Proposed Sessions'),
   );

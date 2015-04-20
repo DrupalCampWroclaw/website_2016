@@ -562,17 +562,29 @@ function application_update_7041() {
 
 /*
  * Update field_session_type in session nodes.
+ *
  */
 function application_update_7042() {
-  $nids = db_select('node', 'n')
-    ->fields('n', array('nid'))
-    ->condition('type', 'session', '=')
-    ->execute()
-    ->fetchCol();
 
-  foreach($nids as $nid) {
-    $node = node_load($nid);
-    $node->field_session_type['en'][0]['value'] = 'lecture';
-    node_save($node);
+  drupal_flush_all_caches();
+  application_api_features_revert(application_features_list());
+
+  $query = new EntityFieldQuery();
+
+  $query->entityCondition('entity_type', 'node')
+    ->entityCondition('bundle', array('session'))
+    ->propertyCondition('status', 1);
+
+  $result = $query->execute();
+
+  if (!empty($result['node'])) {
+    $nids = array_keys($result['node']);
+
+    foreach ($nids as $nid) {
+      $node = node_load($nid);
+      print "---node load";
+      $node->field_session_type[$node->language][0]['value'] = 'lecture';
+      node_save($node);
+    }
   }
 }

@@ -2199,7 +2199,7 @@ tr.selected td {
 /* line 803, ../sass/components/_misc.scss */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1427967917');
+  background-image: url('../images/progress.gif?1425371409');
 }
 
 /* line 809, ../sass/components/_misc.scss */
@@ -3244,7 +3244,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   color: #eb4e3a;
   text-align: right;
 }
-/* line 38, ../../../../../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/utilities/general/_clearfix.scss */
+/* line 38, ../../../../../../../../.rvm/gems/ruby-2.1.2/gems/compass-core-1.0.1/stylesheets/compass/utilities/general/_clearfix.scss */
 .view-news-frontpage .views-row .node-news.node-teaser ul.links:after {
   content: "";
   display: table;
@@ -3390,6 +3390,11 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 .view-sessions .view-content .views-table {
   width: 100%;
   max-width: 100%;
+}
+/* line 12, ../sass/components/views/_sessions.scss */
+.view-sessions .view-content .views-table caption {
+  padding-bottom: 10px;
+  font-weight: bold;
 }
 
 /* SMACSS theme rules */
