@@ -315,9 +315,9 @@ function session_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'inline',
-        'module' => 'list',
+        'module' => 'application',
         'settings' => array(),
-        'type' => 'list_default',
+        'type' => 'custom_list_text',
         'weight' => 6,
       ),
       'teaser' => array(
