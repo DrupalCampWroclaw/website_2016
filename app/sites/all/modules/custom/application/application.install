@@ -582,7 +582,6 @@ function application_update_7042() {
 
     foreach ($nids as $nid) {
       $node = node_load($nid);
-      print "---node load";
       $node->field_session_type[$node->language][0]['value'] = 'lecture';
       node_save($node);
     }
