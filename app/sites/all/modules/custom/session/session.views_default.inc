@@ -22,12 +22,14 @@ function session_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Sessions';
+  $handler->display->display_options['title'] = 'Wykłady';
   $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_text'] = 'więcej';
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Przywróć';
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['style_plugin'] = 'table';
   $handler->display->display_options['style_options']['grouping'] = array(
@@ -88,7 +90,7 @@ function session_views_default_views() {
       'empty_column' => 0,
     ),
   );
-  /* Header: Global: PHP */
+  /* Nagłówek: Global: PHP */
   $handler->display->display_options['header']['php']['id'] = 'php';
   $handler->display->display_options['header']['php']['table'] = 'views';
   $handler->display->display_options['header']['php']['field'] = 'php';
@@ -98,60 +100,62 @@ function session_views_default_views() {
   $handler->display->display_options['relationships']['flag_count_rel']['field'] = 'flag_count_rel';
   $handler->display->display_options['relationships']['flag_count_rel']['required'] = 0;
   $handler->display->display_options['relationships']['flag_count_rel']['flag'] = 'session_vote';
-  /* Field: Content: Title */
+  /* Pole: Zawartość: Tytuł */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Content: Experience level */
+  /* Pole: Zawartość: Experience level */
   $handler->display->display_options['fields']['field_session_experience_level']['id'] = 'field_session_experience_level';
   $handler->display->display_options['fields']['field_session_experience_level']['table'] = 'field_data_field_session_experience_level';
   $handler->display->display_options['fields']['field_session_experience_level']['field'] = 'field_session_experience_level';
-  /* Field: Content: Speakers */
+  $handler->display->display_options['fields']['field_session_experience_level']['label'] = 'Poziom zaawansowania';
+  /* Pole: Zawartość: Speakers */
   $handler->display->display_options['fields']['field_session_speakers']['id'] = 'field_session_speakers';
   $handler->display->display_options['fields']['field_session_speakers']['table'] = 'field_data_field_session_speakers';
   $handler->display->display_options['fields']['field_session_speakers']['field'] = 'field_session_speakers';
+  $handler->display->display_options['fields']['field_session_speakers']['label'] = 'Prelegenci';
   $handler->display->display_options['fields']['field_session_speakers']['settings'] = array(
     'link' => 1,
   );
-  /* Field: Content: Session Language */
+  /* Pole: Zawartość: Session Language */
   $handler->display->display_options['fields']['field_session_language']['id'] = 'field_session_language';
   $handler->display->display_options['fields']['field_session_language']['table'] = 'field_data_field_session_language';
   $handler->display->display_options['fields']['field_session_language']['field'] = 'field_session_language';
-  $handler->display->display_options['fields']['field_session_language']['label'] = 'Language';
-  /* Field: Flags: Flag counter */
+  $handler->display->display_options['fields']['field_session_language']['label'] = 'Język';
+  /* Pole: Flags: Flag counter */
   $handler->display->display_options['fields']['count']['id'] = 'count';
   $handler->display->display_options['fields']['count']['table'] = 'flag_counts';
   $handler->display->display_options['fields']['count']['field'] = 'count';
   $handler->display->display_options['fields']['count']['relationship'] = 'flag_count_rel';
-  $handler->display->display_options['fields']['count']['label'] = 'Votes';
+  $handler->display->display_options['fields']['count']['label'] = 'Głosy';
   $handler->display->display_options['fields']['count']['separator'] = ' ';
-  /* Field: Content: Session type */
+  /* Pole: Zawartość: Session type */
   $handler->display->display_options['fields']['field_session_type']['id'] = 'field_session_type';
   $handler->display->display_options['fields']['field_session_type']['table'] = 'field_data_field_session_type';
   $handler->display->display_options['fields']['field_session_type']['field'] = 'field_session_type';
   $handler->display->display_options['fields']['field_session_type']['exclude'] = TRUE;
-  /* Sort criterion: Content: Post date */
+  /* Sort criterion: Zawartość: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Filter criterion: Content: Published */
+  /* Filter criterion: Zawartość: Opublikowane */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
+  /* Filter criterion: Zawartość: Typ */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'session' => 'session',
   );
-  /* Filter criterion: Content: Status (field_session_status) */
+  /* Filter criterion: Zawartość: Status (field_session_status) */
   $handler->display->display_options['filters']['field_session_status_value']['id'] = 'field_session_status_value';
   $handler->display->display_options['filters']['field_session_status_value']['table'] = 'field_data_field_session_status';
   $handler->display->display_options['filters']['field_session_status_value']['field'] = 'field_session_status_value';
@@ -162,9 +166,9 @@ function session_views_default_views() {
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Proposed Sessions';
+  $handler->display->display_options['title'] = 'Propozycje wykładów';
   $handler->display->display_options['defaults']['header'] = FALSE;
-  /* Header: Global: PHP */
+  /* Nagłówek: Global: PHP */
   $handler->display->display_options['header']['php']['id'] = 'php';
   $handler->display->display_options['header']['php']['table'] = 'views';
   $handler->display->display_options['header']['php']['field'] = 'php';
@@ -173,24 +177,24 @@ function session_views_default_views() {
   $handler->display->display_options['path'] = 'sessions/proposed';
   $translatables['sessions'] = array(
     t('Master'),
-    t('Sessions'),
-    t('more'),
+    t('Wykłady'),
+    t('więcej'),
     t('Apply'),
-    t('Reset'),
+    t('Przywróć'),
     t('Sort by'),
     t('Asc'),
     t('Desc'),
     t('counter'),
-    t('Title'),
-    t('Experience level'),
-    t('Speakers'),
-    t('Language'),
-    t('Votes'),
+    t('Tytuł'),
+    t('Poziom zaawansowania'),
+    t('Prelegenci'),
+    t('Język'),
+    t('Głosy'),
     t('.'),
     t(' '),
     t('Session type'),
     t('Page'),
-    t('Proposed Sessions'),
+    t('Propozycje wykładów'),
   );
   $export['sessions'] = $view;
 
@@ -207,12 +211,14 @@ function session_views_default_views() {
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_text'] = 'więcej';
   $handler->display->display_options['link_display'] = 'page_1';
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['query']['options']['query_comment'] = FALSE;
   $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Przywróć';
   $handler->display->display_options['pager']['type'] = 'date_views_pager';
   $handler->display->display_options['pager']['options']['date_id'] = 'month';
   $handler->display->display_options['style_plugin'] = 'calendar_style';
@@ -232,7 +238,7 @@ function session_views_default_views() {
   $handler->display->display_options['relationships']['field_session_timeslot_target_id']['table'] = 'field_data_field_session_timeslot';
   $handler->display->display_options['relationships']['field_session_timeslot_target_id']['field'] = 'field_session_timeslot_target_id';
   $handler->display->display_options['relationships']['field_session_timeslot_target_id']['required'] = TRUE;
-  /* Field: Content: Date */
+  /* Pole: Zawartość: Date */
   $handler->display->display_options['fields']['field_timeslot_date']['id'] = 'field_timeslot_date';
   $handler->display->display_options['fields']['field_timeslot_date']['table'] = 'field_data_field_timeslot_date';
   $handler->display->display_options['fields']['field_timeslot_date']['field'] = 'field_timeslot_date';
@@ -248,7 +254,7 @@ function session_views_default_views() {
   );
   $handler->display->display_options['fields']['field_timeslot_date']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_timeslot_date']['delta_offset'] = '0';
-  /* Field: Content: Title */
+  /* Pole: Zawartość: Tytuł */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -258,7 +264,7 @@ function session_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['hide_alter_empty'] = FALSE;
-  /* Field: Content: Room */
+  /* Pole: Zawartość: Room */
   $handler->display->display_options['fields']['field_timeslot_room']['id'] = 'field_timeslot_room';
   $handler->display->display_options['fields']['field_timeslot_room']['table'] = 'field_data_field_timeslot_room';
   $handler->display->display_options['fields']['field_timeslot_room']['field'] = 'field_timeslot_room';
@@ -266,7 +272,7 @@ function session_views_default_views() {
   $handler->display->display_options['fields']['field_timeslot_room']['settings'] = array(
     'link' => 0,
   );
-  /* Field: Content: Speakers */
+  /* Pole: Zawartość: Speakers */
   $handler->display->display_options['fields']['field_session_speakers']['id'] = 'field_session_speakers';
   $handler->display->display_options['fields']['field_session_speakers']['table'] = 'field_data_field_session_speakers';
   $handler->display->display_options['fields']['field_session_speakers']['field'] = 'field_session_speakers';
@@ -277,18 +283,18 @@ function session_views_default_views() {
     'link' => 1,
   );
   $handler->display->display_options['fields']['field_session_speakers']['delta_offset'] = '0';
-  /* Field: Content: Session Language */
+  /* Pole: Zawartość: Session Language */
   $handler->display->display_options['fields']['field_session_language']['id'] = 'field_session_language';
   $handler->display->display_options['fields']['field_session_language']['table'] = 'field_data_field_session_language';
   $handler->display->display_options['fields']['field_session_language']['field'] = 'field_session_language';
   $handler->display->display_options['fields']['field_session_language']['relationship'] = 'reverse_field_session_timeslot_node';
   $handler->display->display_options['fields']['field_session_language']['label'] = '';
   $handler->display->display_options['fields']['field_session_language']['element_label_colon'] = FALSE;
-  /* Sort criterion: Content: Date -  start date (field_timeslot_date) */
+  /* Sort criterion: Zawartość: Date -  start date (field_timeslot_date) */
   $handler->display->display_options['sorts']['field_timeslot_date_value']['id'] = 'field_timeslot_date_value';
   $handler->display->display_options['sorts']['field_timeslot_date_value']['table'] = 'field_data_field_timeslot_date';
   $handler->display->display_options['sorts']['field_timeslot_date_value']['field'] = 'field_timeslot_date_value';
-  /* Filter criterion: Content: Published */
+  /* Filter criterion: Zawartość: Opublikowane */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -318,11 +324,12 @@ function session_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'calendar_entity';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Date: Date (node) */
+  /* Contextual filter: Data: Date (node) */
   $handler->display->display_options['arguments']['date_argument']['id'] = 'date_argument';
   $handler->display->display_options['arguments']['date_argument']['table'] = 'node';
   $handler->display->display_options['arguments']['date_argument']['field'] = 'date_argument';
   $handler->display->display_options['arguments']['date_argument']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['date_argument']['exception']['title'] = 'Wszystko';
   $handler->display->display_options['arguments']['date_argument']['default_argument_type'] = 'fixed';
   $handler->display->display_options['arguments']['date_argument']['default_argument_options']['argument'] = '2014-05-17';
   $handler->display->display_options['arguments']['date_argument']['summary']['format'] = 'default_summary';
@@ -337,17 +344,17 @@ function session_views_default_views() {
   $handler->display->display_options['menu']['context'] = 0;
   $translatables['sessions_accepted_calendar'] = array(
     t('Master'),
-    t('more'),
+    t('więcej'),
     t('Apply'),
-    t('Reset'),
+    t('Przywróć'),
     t('Sort by'),
     t('Asc'),
     t('Desc'),
-    t('Content referencing Content from field_session_timeslot'),
-    t('Content entity referenced from field_session_timeslot'),
+    t('Zawartość referencing Zawartość from field_session_timeslot'),
+    t('Zawartość entity referenced from field_session_timeslot'),
     t('Room'),
     t('Day'),
-    t('All'),
+    t('Wszystko'),
   );
   $export['sessions_accepted_calendar'] = $view;
 
@@ -365,44 +372,47 @@ function session_views_default_views() {
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'Submitted sessions';
   $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_text'] = 'więcej';
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Przywróć';
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '0';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Content: Title */
+  /* Pole: Zawartość: Tytuł */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Sort criterion: Content: Title */
+  /* Sort criterion: Zawartość: Tytuł */
   $handler->display->display_options['sorts']['title']['id'] = 'title';
   $handler->display->display_options['sorts']['title']['table'] = 'node';
   $handler->display->display_options['sorts']['title']['field'] = 'title';
-  /* Contextual filter: Content: Author uid */
+  /* Contextual filter: Zawartość: Author uid */
   $handler->display->display_options['arguments']['uid']['id'] = 'uid';
   $handler->display->display_options['arguments']['uid']['table'] = 'node';
   $handler->display->display_options['arguments']['uid']['field'] = 'uid';
   $handler->display->display_options['arguments']['uid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['uid']['exception']['title'] = 'Wszystko';
   $handler->display->display_options['arguments']['uid']['default_argument_type'] = 'user';
   $handler->display->display_options['arguments']['uid']['default_argument_options']['user'] = FALSE;
   $handler->display->display_options['arguments']['uid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['uid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['uid']['summary_options']['items_per_page'] = '25';
-  /* Filter criterion: Content: Published */
+  /* Filter criterion: Zawartość: Opublikowane */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
+  /* Filter criterion: Zawartość: Typ */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -415,13 +425,13 @@ function session_views_default_views() {
   $translatables['sessions_user'] = array(
     t('Master'),
     t('Submitted sessions'),
-    t('more'),
+    t('więcej'),
     t('Apply'),
-    t('Reset'),
+    t('Przywróć'),
     t('Sort by'),
     t('Asc'),
     t('Desc'),
-    t('All'),
+    t('Wszystko'),
     t('Block'),
   );
   $export['sessions_user'] = $view;
@@ -440,14 +450,16 @@ function session_views_default_views() {
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'Videos';
   $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_text'] = 'więcej';
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Przywróć';
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Relationship: Content: Author */
+  /* Relationship: Zawartość: Autor */
   $handler->display->display_options['relationships']['uid']['id'] = 'uid';
   $handler->display->display_options['relationships']['uid']['table'] = 'node';
   $handler->display->display_options['relationships']['uid']['field'] = 'uid';
@@ -455,7 +467,7 @@ function session_views_default_views() {
   $handler->display->display_options['relationships']['field_session_timeslot_target_id']['id'] = 'field_session_timeslot_target_id';
   $handler->display->display_options['relationships']['field_session_timeslot_target_id']['table'] = 'field_data_field_session_timeslot';
   $handler->display->display_options['relationships']['field_session_timeslot_target_id']['field'] = 'field_session_timeslot_target_id';
-  /* Field: User: Uid */
+  /* Pole: Użytkownik: Uid */
   $handler->display->display_options['fields']['uid']['id'] = 'uid';
   $handler->display->display_options['fields']['uid']['table'] = 'users';
   $handler->display->display_options['fields']['uid']['field'] = 'uid';
@@ -464,7 +476,7 @@ function session_views_default_views() {
   $handler->display->display_options['fields']['uid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['uid']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['uid']['link_to_user'] = FALSE;
-  /* Field: User: Last name */
+  /* Pole: Użytkownik: Last name */
   $handler->display->display_options['fields']['field_user_last_name']['id'] = 'field_user_last_name';
   $handler->display->display_options['fields']['field_user_last_name']['table'] = 'field_data_field_user_last_name';
   $handler->display->display_options['fields']['field_user_last_name']['field'] = 'field_user_last_name';
@@ -472,7 +484,7 @@ function session_views_default_views() {
   $handler->display->display_options['fields']['field_user_last_name']['label'] = '';
   $handler->display->display_options['fields']['field_user_last_name']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_user_last_name']['element_label_colon'] = FALSE;
-  /* Field: User: First name */
+  /* Pole: Użytkownik: First name */
   $handler->display->display_options['fields']['field_user_first_name']['id'] = 'field_user_first_name';
   $handler->display->display_options['fields']['field_user_first_name']['table'] = 'field_data_field_user_first_name';
   $handler->display->display_options['fields']['field_user_first_name']['field'] = 'field_user_first_name';
@@ -480,14 +492,14 @@ function session_views_default_views() {
   $handler->display->display_options['fields']['field_user_first_name']['label'] = '';
   $handler->display->display_options['fields']['field_user_first_name']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_user_first_name']['element_label_colon'] = FALSE;
-  /* Field: Content: Title */
+  /* Pole: Zawartość: Tytuł */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Global: Custom text */
+  /* Pole: Global: Custom text */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
@@ -496,7 +508,7 @@ function session_views_default_views() {
   $handler->display->display_options['fields']['nothing']['alter']['make_link'] = TRUE;
   $handler->display->display_options['fields']['nothing']['alter']['path'] = 'user/[uid]';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
-  /* Field: Content: Youtube */
+  /* Pole: Zawartość: Youtube */
   $handler->display->display_options['fields']['field_youtube']['id'] = 'field_youtube';
   $handler->display->display_options['fields']['field_youtube']['table'] = 'field_data_field_youtube';
   $handler->display->display_options['fields']['field_youtube']['field'] = 'field_youtube';
@@ -506,33 +518,33 @@ function session_views_default_views() {
   $handler->display->display_options['fields']['field_youtube']['settings'] = array(
     'video_style' => 'normal',
   );
-  /* Sort criterion: Content: Date -  start date (field_timeslot_date) */
+  /* Sort criterion: Zawartość: Date -  start date (field_timeslot_date) */
   $handler->display->display_options['sorts']['field_timeslot_date_value']['id'] = 'field_timeslot_date_value';
   $handler->display->display_options['sorts']['field_timeslot_date_value']['table'] = 'field_data_field_timeslot_date';
   $handler->display->display_options['sorts']['field_timeslot_date_value']['field'] = 'field_timeslot_date_value';
   $handler->display->display_options['sorts']['field_timeslot_date_value']['relationship'] = 'field_session_timeslot_target_id';
-  /* Filter criterion: Content: Published */
+  /* Filter criterion: Zawartość: Opublikowane */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
+  /* Filter criterion: Zawartość: Typ */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'session' => 'session',
   );
-  /* Filter criterion: Content: Status (field_session_status) */
+  /* Filter criterion: Zawartość: Status (field_session_status) */
   $handler->display->display_options['filters']['field_session_status_value']['id'] = 'field_session_status_value';
   $handler->display->display_options['filters']['field_session_status_value']['table'] = 'field_data_field_session_status';
   $handler->display->display_options['filters']['field_session_status_value']['field'] = 'field_session_status_value';
   $handler->display->display_options['filters']['field_session_status_value']['value'] = array(
     1 => '1',
   );
-  /* Filter criterion: Content: Youtube - Video URL */
+  /* Filter criterion: Zawartość: Youtube - Video URL */
   $handler->display->display_options['filters']['field_youtube_video_url']['id'] = 'field_youtube_video_url';
   $handler->display->display_options['filters']['field_youtube_video_url']['table'] = 'field_data_field_youtube';
   $handler->display->display_options['filters']['field_youtube_video_url']['field'] = 'field_youtube_video_url';
@@ -544,14 +556,14 @@ function session_views_default_views() {
   $translatables['videos'] = array(
     t('Master'),
     t('Videos'),
-    t('more'),
+    t('więcej'),
     t('Apply'),
-    t('Reset'),
+    t('Przywróć'),
     t('Sort by'),
     t('Asc'),
     t('Desc'),
     t('author'),
-    t('Content entity referenced from field_session_timeslot'),
+    t('Zawartość entity referenced from field_session_timeslot'),
     t('[field_user_first_name] [field_user_last_name]'),
     t('Page'),
   );
