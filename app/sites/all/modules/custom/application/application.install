@@ -587,3 +587,18 @@ function application_update_7042() {
     }
   }
 }
+
+/**
+ * 2015-04-24: Enable MobileApi module.
+ */
+function application_update_7043() {
+  $module_list = array(
+    'mobileapi'
+  );
+  module_enable($module_list);
+  module_list(TRUE, FALSE);
+
+  // Flush caches.
+  drupal_flush_all_caches();
+  application_api_features_revert(application_features_list());
+}
