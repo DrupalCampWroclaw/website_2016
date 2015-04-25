@@ -329,7 +329,7 @@ function session_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_session_type',
-    'label' => 'Session type',
+    'label' => 'Type',
     'required' => 0,
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -437,11 +437,11 @@ function session_field_default_field_instances() {
   t('Experience level');
   t('Session Language');
   t('Session Time Slot');
-  t('Session type');
   t('Slides');
   t('Speakers');
   t('Status');
   t('Title');
+  t('Type');
   t('Upload your slides here as a PDF, or link to them from the description. (This is typically done after your session.)');
   t('Youtube');
 
