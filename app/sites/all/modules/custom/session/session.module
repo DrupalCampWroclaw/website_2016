@@ -35,6 +35,22 @@ function session_menu() {
   return $items;
 }
 
+
+/**
+ * Implements hook_theme().
+ */
+function session_theme($existing, $type, $theme, $path) {
+  return array(
+    'sessions_accepted' => array(
+      'variables' => array(
+        'data' => NULL,
+      ),
+      'template' => 'sessions_accepted',
+    ),
+  );
+}
+
+
 /**
  * Implements hook_form_alter();
  */
@@ -93,7 +109,12 @@ function session_flag_access($flag, $entity_id, $action, $account) {
 }
 
 function session_get_conference_days() {
-  $ret = variable_get('session_conference_days', array('2015-05-29', '2015-05-30', '2015-05-31'));
+  $ret = variable_get('session_conference_days',
+    array(
+      '2015-05-29',
+      '2015-05-30',
+      '2015-05-31',
+    ));
   return $ret;
 }
 
@@ -183,7 +204,32 @@ function session_accepted_sessions_block() {
 
 
   $data =  sessions_get_sessions_data($days, $rooms);
-
+  $output .= theme('sessions_accepted', array('data' => $data));
 
   return $output;
+}
+
+function session_get_time_start_and_end($node_session) {
+  $ret = array(
+    'timeslot_from' => REQUEST_TIME,
+    'timeslot_to' => REQUEST_TIME,
+  );
+
+
+  // Get timeslot node.
+  if (isset($node_session->field_session_timeslot['und'][0]['target_id'])) {
+    $timeslot_node = node_load($node_session->field_session_timeslot['und'][0]['target_id']);
+
+
+    if (isset($timeslot_node->field_timeslot_date['und'][0])) {
+      $date_object = $timeslot_node->field_timeslot_date['und'][0];
+
+      $ret = array(
+        'timeslot_from' => strtotime($date_object['value'] . ' ' . $date_object['timezone_db']),
+        'timeslot_to' => strtotime($date_object['value2'] . ' ' . $date_object['timezone_db']),
+      );
+    }
+  }
+
+  return $ret;
 }
