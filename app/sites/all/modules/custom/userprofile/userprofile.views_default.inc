@@ -506,6 +506,11 @@ if(isset($data->field_field_user_tshirt_size[0]) && !empty($data->field_field_us
   $handler->display->display_options['fields']['field_user_organization']['id'] = 'field_user_organization';
   $handler->display->display_options['fields']['field_user_organization']['table'] = 'field_data_field_user_organization';
   $handler->display->display_options['fields']['field_user_organization']['field'] = 'field_user_organization';
+  /* Field: User: Planned attendance */
+  $handler->display->display_options['fields']['field_attendance']['id'] = 'field_attendance';
+  $handler->display->display_options['fields']['field_attendance']['table'] = 'field_data_field_attendance';
+  $handler->display->display_options['fields']['field_attendance']['field'] = 'field_attendance';
+  $handler->display->display_options['fields']['field_attendance']['delta_offset'] = '0';
   /* Sort criterion: User: Last name (field_user_last_name) */
   $handler->display->display_options['sorts']['field_user_last_name_value']['id'] = 'field_user_last_name_value';
   $handler->display->display_options['sorts']['field_user_last_name_value']['table'] = 'field_data_field_user_last_name';
@@ -609,6 +614,7 @@ if(isset($data->field_field_user_tshirt_size[0]) && !empty($data->field_field_us
     t('First name'),
     t('E-mail'),
     t('Organization'),
+    t('Planned attendance'),
     t('Aktywne'),
     t('Nazwa'),
     t('Role'),
