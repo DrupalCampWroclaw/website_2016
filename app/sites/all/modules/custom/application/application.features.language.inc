@@ -20,7 +20,7 @@ function application_locale_default_languages() {
     'plurals' => 0,
     'formula' => '',
     'domain' => '',
-    'prefix' => '',
+    'prefix' => 'en',
     'weight' => 0,
   );
   // Exported language: pl.
@@ -33,7 +33,7 @@ function application_locale_default_languages() {
     'plurals' => 3,
     'formula' => '(($n==1)?(0):((((($n%10)>=2)&&(($n%10)<=4))&&((($n%100)<10)||(($n%100)>=20)))?(1):2))',
     'domain' => '',
-    'prefix' => 'pl',
+    'prefix' => '',
     'weight' => 0,
   );
   return $languages;

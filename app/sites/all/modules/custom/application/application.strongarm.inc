@@ -64,17 +64,17 @@ function application_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'language_default';
   $strongarm->value = (object) array(
-    'language' => 'en',
-    'name' => 'English',
-    'native' => 'English',
-    'direction' => 0,
+    'language' => 'pl',
+    'name' => 'Polish',
+    'native' => 'Polski',
+    'direction' => '0',
     'enabled' => 1,
-    'plurals' => 0,
-    'formula' => '',
+    'plurals' => '3',
+    'formula' => '(($n==1)?(0):((((($n%10)>=2)&&(($n%10)<=4))&&((($n%100)<10)||(($n%100)>=20)))?(1):2))',
     'domain' => '',
     'prefix' => '',
-    'weight' => 0,
-    'javascript' => '',
+    'weight' => '0',
+    'javascript' => 'YgK8X0yVrLZGdMV5XNdq3ItUazBPEwMLnZ1dNfg5LPY',
   );
   $export['language_default'] = $strongarm;
 
