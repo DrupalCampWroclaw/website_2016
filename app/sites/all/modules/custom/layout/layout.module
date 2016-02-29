@@ -174,9 +174,9 @@ function layout_language_links() {
 
   $output = '
     <ul>
-      <li class="lang-en lang ' . $class_en . '"><a href="/">EN</a></li>
+      <li class="lang-en lang ' . $class_en . '"><a href="/en">EN</a></li>
       <li class="separator"> / </li>
-      <li class="lang-pl lang ' . $class_pl . '"><a href="/pl">PL</a></li>
+      <li class="lang-pl lang ' . $class_pl . '"><a href="/">PL</a></li>
     </ul>';
 
 
