@@ -61,7 +61,7 @@ function conferencestats_header_bar() {
   $output .= '<li>' . l(t('Attendees') . ' : <span>' . $attendees . '</span>', 'attendees', array('html' => TRUE)) . '</li>';
 
   $timestamp_now = REQUEST_TIME;
-  $timestamp_voting_end = strtotime(variable_get('session_voting_end_date', '2015-05-15'));
+  $timestamp_voting_end = strtotime(variable_get('session_voting_end_date', '2016-05-15'));
 
   if ($timestamp_now > $timestamp_voting_end) {
     $output .= '<li>' . l(t('Sessions : <span>' . $sessions . '</span>'), variable_get('conferencestats_node_accepted', 'node/70'), array('html' => TRUE)) . '</li>';

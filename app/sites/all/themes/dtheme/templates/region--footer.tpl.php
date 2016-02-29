@@ -18,6 +18,9 @@
               <a href="https://github.com/DrupalCampWroclaw" target="_blank">DrupalCamp Wroclaw on GitHub</a>
             </li>
             <li>
+              <a href="http://2015.drupalcampwroclaw.pl/" target="_blank">DrupalCamp Wroclaw 2015</a>
+            </li>
+            <li>
               <a href="http://2014.drupalcampwroclaw.pl/" target="_blank">DrupalCamp Wroclaw 2014</a>
             </li>
             <li>
