@@ -33,3 +33,4 @@ Jak pracować nad stroną:
 - do katalogu /conf/local kopiujesz pliki z /conf/template
 - konfigurujesz pliki w /conf/local - podajesz parametry swojego lokalnego srodowiska
 - wklepujesz w konsoli komendę do builda jak w https://github.com/DrupalCampWroclaw/website/blob/develop/docs/developer-info.txt (tylko zmieniasz ścieżkę).
+
