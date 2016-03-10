@@ -257,6 +257,10 @@
     {
       li {
         line-height: 45px;
+
+        @media only screen and (max-width : $screen-mobile-mid) {
+          line-height: 20px;
+        }
       }
     }
 
@@ -350,6 +354,11 @@
           li {
             display: inline;
             padding: 0;
+
+            @media only screen and (max-width : $screen-mobile-mid) {
+              display: block;
+            }
+
             a:after {
               content: " ";
             }
