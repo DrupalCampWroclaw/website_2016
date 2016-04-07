@@ -144,3 +144,12 @@ function STARTERKIT_preprocess_block(&$variables, $hook) {
 function dtheme_views_pre_render(&$view)  {
   $view->set_title(t($view->get_title()));
 }
+
+/**
+ * Implements hook_preprocess_html().
+ */
+function dtheme_preprocess_html(&$vars) {
+  if(($key = array_search('section-sponsor',  $vars['classes_array'])) !== false) {
+    unset($vars['classes_array'][$key]);
+  }
+}
