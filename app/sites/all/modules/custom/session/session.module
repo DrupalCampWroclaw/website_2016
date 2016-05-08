@@ -111,9 +111,8 @@ function session_flag_access($flag, $entity_id, $action, $account) {
 function session_get_conference_days() {
   $ret = variable_get('session_conference_days',
     array(
-      '2015-05-29',
-      '2015-05-30',
-      '2015-05-31',
+      '2016-05-21',
+      '2016-05-22',
     ));
   return $ret;
 }
