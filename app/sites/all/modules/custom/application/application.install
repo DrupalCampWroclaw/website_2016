@@ -610,3 +610,14 @@ function application_update_7044() {
   drupal_flush_all_caches();
   application_api_features_revert(application_features_list());
 }
+
+/**
+ * 2016-05-08.
+ */
+function application_update_7045() {
+   variable_set('session_conference_days',
+    array(
+      '2016-05-21',
+      '2016-05-22',
+    ));
+}
