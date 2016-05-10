@@ -635,5 +635,5 @@ function application_update_7046() {
  */
 function application_update_7047() {
   drupal_flush_all_caches();
-  application_api_features_revert(application_features_list());
+  application_api_features_revert(array('userprofile'));
 }

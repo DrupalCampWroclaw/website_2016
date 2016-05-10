@@ -32,8 +32,8 @@ function userprofile_image_default_styles() {
     'label' => '150x150',
     'effects' => array(
       1 => array(
-        'label' => 'Skalowanie i przycinanie',
-        'help' => 'Efekt skalowanie i przycinanie zachowa proporcje oryginalnego obrazu podczas skalowania a następnie przytnie obrazek na dłuższym brzegu. Efekt jest przydatny do tworzenia kwadratowych miniatur bez rozciągania obrazu.',
+        'label' => 'Scale and crop',
+        'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
         'effect callback' => 'image_scale_and_crop_effect',
         'dimensions callback' => 'image_resize_dimensions',
         'form callback' => 'image_resize_form',
