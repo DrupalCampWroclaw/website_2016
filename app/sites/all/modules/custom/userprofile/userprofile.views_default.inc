@@ -136,7 +136,7 @@ function userprofile_views_default_views() {
   /* Display: Speakers */
   $handler = $view->new_display('page', 'Speakers', 'page_1');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Speakers';
+  $handler->display->display_options['title'] = 'Prelegenci';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: User: Active */
@@ -244,6 +244,7 @@ function userprofile_views_default_views() {
 <p>[field_user_organization]</p>'),
     t('more'),
     t('Speakers'),
+    t('Prelegenci'),
     t('Team'),
     t('Featured speakers'),
   );
@@ -498,6 +499,7 @@ if(isset($data->field_field_user_tshirt_size[0]) && !empty($data->field_field_us
   $handler->display->display_options['fields']['field_user_first_name']['id'] = 'field_user_first_name';
   $handler->display->display_options['fields']['field_user_first_name']['table'] = 'field_data_field_user_first_name';
   $handler->display->display_options['fields']['field_user_first_name']['field'] = 'field_user_first_name';
+  $handler->display->display_options['fields']['field_user_first_name']['label'] = 'Imię';
   /* Field: User: E-mail */
   $handler->display->display_options['fields']['mail']['id'] = 'mail';
   $handler->display->display_options['fields']['mail']['table'] = 'users';
@@ -579,7 +581,7 @@ if(isset($data->field_field_user_tshirt_size[0]) && !empty($data->field_field_us
   $handler->display->display_options['filters']['rid']['field'] = 'rid';
   $handler->display->display_options['filters']['rid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['rid']['expose']['operator_id'] = 'rid_op';
-  $handler->display->display_options['filters']['rid']['expose']['label'] = 'Role';
+  $handler->display->display_options['filters']['rid']['expose']['label'] = 'Rola';
   $handler->display->display_options['filters']['rid']['expose']['operator'] = 'rid_op';
   $handler->display->display_options['filters']['rid']['expose']['identifier'] = 'rid';
   $handler->display->display_options['filters']['rid']['expose']['remember_roles'] = array(
@@ -609,15 +611,16 @@ if(isset($data->field_field_user_tshirt_size[0]) && !empty($data->field_field_us
     t('Asc'),
     t('Desc'),
     t('User'),
+    t('- Choose an operation -'),
     t('Uid'),
     t('Last name'),
-    t('First name'),
+    t('Imię'),
     t('E-mail'),
     t('Organization'),
     t('Planned attendance'),
     t('Aktywne'),
     t('Nazwa'),
-    t('Role'),
+    t('Rola'),
     t('Page'),
     t('more'),
   );
@@ -863,7 +866,7 @@ if(isset($data->field_field_user_tshirt_size[0]) && !empty($data->field_field_us
   $handler->display->display_options['filters']['rid']['field'] = 'rid';
   $handler->display->display_options['filters']['rid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['rid']['expose']['operator_id'] = 'rid_op';
-  $handler->display->display_options['filters']['rid']['expose']['label'] = 'Role';
+  $handler->display->display_options['filters']['rid']['expose']['label'] = 'Rola';
   $handler->display->display_options['filters']['rid']['expose']['operator'] = 'rid_op';
   $handler->display->display_options['filters']['rid']['expose']['identifier'] = 'rid';
   $handler->display->display_options['filters']['rid']['expose']['remember_roles'] = array(
@@ -896,7 +899,7 @@ if(isset($data->field_field_user_tshirt_size[0]) && !empty($data->field_field_us
     t('Send e-mail'),
     t('Aktywne'),
     t('Nazwa'),
-    t('Role'),
+    t('Rola'),
     t('Page'),
     t('more'),
   );
